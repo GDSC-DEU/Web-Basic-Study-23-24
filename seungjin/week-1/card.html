@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Design</title>
+</head>
+<style>
+  body {
+    margin: 0;
+    background-color: #8AABE5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  h1 {
+    font-size: 0px;
+  }
+
+  img {
+    width: 500px;
+    position: relative;
+    pointer-events: none;
+  }
+
+  p {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    height: 600px;
+    background-color: white;
+    position: relative;
+  }
+
+  .circle {
+    background-color: #ff3333;
+    width: 100%;
+    position: absolute;
+    top: 405px;
+    padding-top: 30px;
+    border-top: 5px solid black;
+    border-radius: 50% 50% 0% 0%;
+  }
+
+  .all {
+    transition-property: all;
+    transition-duration: 1s;
+  }
+
+  .all:hover {
+    position: absolute;
+    top: 310px;
+    padding-top: 125px;
+    background-color: #337eff;
+  }
+
+  @media (max-width: 600px) {
+    body {
+      background-color: rgb(20, 20, 20)
+    }
+
+    .container {
+      display: none;
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+      font-size: 20px;
+
+    }
+  }
+</style>
+
+<body>
+  <h1>화면을 더 키워주세요.</h1>
+  <div class="container">
+    <img src="../images/img.png" alt="img">
+    <div class="circle all">
+      <p>Hello IMG</p>
+    </div>
+  </div>
+
+</body>
+
+</html>
