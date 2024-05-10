@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 45px;
+  text-align: center;
+  border-bottom: 1px solid gray;
+  margin: 0;
+  padding: 20px;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+
+#grid ol {
+  padding-left: 33px;
+  border-right: 1px solid gray;
+  margin: 0;
+}
+
+#grid #article {
+  text-align: center;
+  padding-left: 25px;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
