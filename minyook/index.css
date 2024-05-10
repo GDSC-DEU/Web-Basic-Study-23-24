@@ -24,6 +24,9 @@ h1 {
   padding-left: 33px;
   border-right: 1px solid gray;
   margin: 0;
+  font-size: 20px;
+  padding: 20px;
+  padding-left: 40px;
 }
 
 #grid #article {
@@ -31,8 +34,24 @@ h1 {
   padding-left: 25px;
 }
 
+p {
+  font-size: 18px;
+}
+
 img {
   width: 200px;
   height: 200px;
   object-fit: cover;
+}
+
+@media (max-width: 800px) {
+  #grid {
+    display: block;
+  }
+  ol {
+    border-right: none;
+  }
+  h1 {
+    border-bottom: none;
+  }
 }
