@@ -191,3 +191,104 @@ ul - li 태그의 부모 태그 리스트를 부분하기 위해 쓰임
 ---
 
 ### WEB1 - 13. 문서의구조와 슈퍼스타들
+
+페이지 제목(이름) - title 태그를 사용
+
+~~~html
+<title>WEB1 - html</title>
+<h1>HTML이란 무엇인가?</h1>
+~~~
+
+<br><br>
+
+***웹 사이트의 인코딩 방식***
+
+~~~html
+<title>WEB1 - html</title>
+<meta charset="utf-8">
+<h1>HTML이란 무엇인가?</h1>
+~~~
+
+<br><br>
+
+> 본문(p 같은 태그)는 body 태그로 묶고 본문을 설명하는 (title, p 같은)태그는 head로 묶기로 약속 ***body와 head를 묶는 최상위 태그 html***
+
+<br>
+
+~~~text
+마지막으로 html 태그 위에 이 문서는 HTML 문서이다 라는 것을 표시하기 위해서
+<!doctype html>라고 적는다.
+~~~
+
+~~~html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>live_server_test</title>
+        <meta charset="utf-8">
+        <h1>afsdfasdfasdf</h1>
+    </head>
+    <body>
+        <p>
+            대충 내용
+        </p>
+    </body>
+</html>
+~~~
+
+<br>
+
+---
+
+### WEB1 - 14. HTML 태그의 제왕
+
+~~~text
+html의 HyperText를 의미하는 태그 a(anchor)
+링크를 만들기 위한 태그
+~~~
+
+<br>
+
+~~~text
+a 태그를 의미 있게 사용하기 위해서는 hypertext의 h와 참고 문서(Reference)의 ref를 합친 href를 넣어야 한다.
+~~~
+
+<br>
+
+~~~html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>live_server_test</title>
+        <meta charset="utf-8">
+        <h1>afsdfasdfasdf</h1>
+    </head>
+    <body>
+        <p>
+            대충 내용
+        </p>
+        <p>
+            <a href="https://www.naver.com/" target="_blank" title="h sd">
+                네이버
+            </a>
+        </p>
+    </body>
+</html>
+~~~
+
+~~~text
+클릭했을 때, 새 탭이 열리게 하고 싶으면 target="_blank"를 추가 / 클릭하기 전에 해당 링크가 무엇인지 알려주고 싶으면 title="html5"를 추가하면 된다.
+~~~
+
+<br>
+
+---
+
+### WEB1 - 15. 웹사이트 완성
+
+~~~text
+웹 사이트 완성하기 실습
+~~~
+
+
+
