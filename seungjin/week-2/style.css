@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: "Noto Serif KR", serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-size: 45px;
+  text-align: center;
+  border-bottom: 1px solid gray;
+  margin: 0;
+  padding: 20px;
+}
+
+ol {
+  border-right: 1px solid gray;
+  width: 100px;
+  margin: 0;
+  padding: 30px;
+}
+
+#grid {
+  display: grid;
+  /* 속성 grid-template-columns은 그리드 레이아웃의 열 수(및 너비)를 지정합니다. */
+  /*  첫 번째 열은 150px의 고정 너비를 가지고, 두 번째 열은 사용 가능한 공간의 비율에 따라 채워짐 */
+  grid-template-columns: 150px 1fr;
+}
+
+#grid #article {
+  padding-left: 30px;
+}
+
+@media (max-width: 800px) {
+  #grid {
+    display: block;
+  }
+
+  ol {
+    border-right: none;
+  }
+
+  h1 {
+    border-bottom: none;
+  }
+}
