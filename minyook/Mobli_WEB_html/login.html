@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/minyook/Moblie_WEB_css/login.css">
   <title>Moblie_WEB</title>
 </head>
 <body>
   
   <div class="login-form">
     <form id="loginForm">
-      <input type="email" id="email" placeholder="이메일">
-      <input type="password" id="password" placeholder="비밀번호">
-      <input type="submit" id="login-btn" value="로그인">
-      <p><a href="/minyook/Mobli_WEB_html/signup.html">회원가입</a></p>
+      <input type="email" id="emailInput" placeholder="이메일" name="email" required><br>
+      <input type="password" id="passwordInput" name="password" placeholder="비밀번호" required><br>
+      <input type="button" class="login" value="로그인">
+      <a href="/project/100프젝/html/signup.html">회원가입</a>
     </form>
   </div>
 
