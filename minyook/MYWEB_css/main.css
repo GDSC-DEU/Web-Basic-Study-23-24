@@ -27,6 +27,11 @@ button {
   margin: 20px;
   outline: none;
 }
+
+a {
+  text-decoration: none;
+}
+
 .navi-btn {
   width: 130px;
   height: 40px;
