@@ -1,18 +1,17 @@
 body {
   width: 100vw;
   height: 100vh;
-  margin: 0;
 }
 
 .header {
   width: 100%;
-  height: 100px;
+  height: 10%;
   text-align: center;
   padding-top: 200px;
 }
 
 .img {
-  width: 100%;
+  width: 80%;
   height: 100%;
   object-fit: contain;
 }
@@ -20,15 +19,15 @@ body {
 /* 로그인 창 스타일 */
 .login-form {
   width: 80%;
-  padding-left: 40px;
+  padding: 40px;
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#emailInput {
-  width: 250px;
+#name, #emailInput, #passwordInput, #Confirmpassword {
+  width: 90%;
   height: 30px;
   padding: 10px;
   margin-bottom: 10px;
@@ -36,17 +35,8 @@ body {
   border-radius: 5px;
 }
 
-#passwordInput {
-  width: 250px;
-  height: 30px;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.login {
-  width: 100%;
+#login-btn {
+  width: 98%;
   height: 50px;
   background-color: #000;
   color: #fff;
@@ -58,7 +48,7 @@ body {
 
 .login-form a {
   display: block;
+  text-decoration: none;
   text-align: center;
-  margin-top: 20px;
-  color: #c0c0c0;
+  color: white;
 }
