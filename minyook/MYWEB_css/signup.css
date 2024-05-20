@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.logo {
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  padding-top: 20px; /* 조정 */
+}
+
+.img {
+  width: 80%;
+  height: auto; /* 변경 */
+  max-height: 100%;
+  margin: 0 auto;
+}
+
+/* 로그인 창 스타일 */
+.login-form {
+  width: 80%;
+  max-width: 400px; /* 변경 */
+  padding: 20px; /* 변경 */
+  margin: 0 auto; /* 변경 */
+}
+
+#email,
+#password,
+#name,
+#Confirmpassword {
+  width: 100%;
+  height: 40px; /* 변경 */
+  padding: 10px;
+  margin-bottom: 20px; /* 변경 */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* 추가 */
+}
+
+.login-btn {
+  display: block;
+  width: 96%;
+  height: 25px;
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}

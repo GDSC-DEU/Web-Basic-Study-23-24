@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Gradient Text</title>
+    <style>
+      /* CSS 속성 중에 접두어를 붙어야 되는 경우가 있습니다. 각 접두어의 의미를 알아 보겠습니다. 쓰는 방법은 속성 앞에 붙이면 됩니다.
+        1.  -webkit- : 구글, 사파리 브라우저에 적용
+        2.  -moz- : 파이어폭스 브라우저에 적용
+        3.  -ms- : 익스플로러에 적용, 보통 생략합니다.
+        4.  -o- : 오페라 브라우저에 적용 
+  
+        https://www.cssportal.com/css-text-gradient-generator/  
+      */
+      .css-gradient-text {
+        font-size: 150px;
+        font-weight: 900;
+
+        background: #121fcf;
+        background: radial-gradient(
+          ellipse farthest-side at top left,
+          #121fcf 0%,
+          #cf1512 100%
+        );
+        background-clip: text;
+        /* -webkit-background-clip: text;  호환성을 위해 표준 속성 'background-clip'을 정의합니다. */
+        -webkit-text-fill-color: transparent;
+      }
+
+      .css-gradient-text-2 {
+        font-size: 200px;
+        font-weight: 900;
+
+        /* 그라디언트 없을시 대체값: 배경 색상 설정 */
+        background-color: red;
+
+        /* 그라디언트 생성 */
+        background-image: linear-gradient(45deg, #f3ec78, #af4261);
+
+        /* 배경 크기와 반복 속성 설정 */
+        background-size: 100%;
+        background-repeat: repeat;
+
+        /* 텍스트를 배경으로 사용하여 그라디언트를 표시 */
+        background-clip: text;
+
+        /* -webkit-background-clip: text;  호환성을 위해 표준 속성 'background-clip'을 정의합니다. */
+
+        /* 텍스트 색상을 투명하게 설정하여 그라디언트가 보이도록 함 */
+        -webkit-text-fill-color: transparent;
+      }
+
+      .css-gradient-img {
+        font-size: 200px;
+        font-weight: 900;
+
+        background: url("https://www.sisain.co.kr/news/photo/202207/48124_87125_4950.jpg")
+          no-repeat center bottom / cover;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .css-gradient-img-2 {
+        font-size: 200px;
+        font-weight: 900;
+
+        background: url("https://cdn.vox-cdn.com/thumbor/VqRdghKDK_2hXRqH56F-NmNkmII=/0x0:4000x2250/1200x675/filters:focal(1680x805:2320x1445)/cdn.vox-cdn.com/uploads/chorus_image/image/70780516/GettyImages_1346022120.0.jpg")
+          no-repeat center bottom / cover;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="css-gradient-text">CSS Gradient Text</div>
+    <hr />
+    <div class="css-gradient-text-2">Yellow</div>
+    <hr />
+    <div class="css-gradient-img">SpaceX</div>
+    <hr />
+    <div class="css-gradient-img-2">Ocean</div>
+    <hr />
+  </body>
+</html>
