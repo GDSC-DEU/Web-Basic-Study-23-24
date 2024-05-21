@@ -9,7 +9,7 @@
   width: 300px;
   height: 150px;
   object-fit: cover;
-  margin-right: 700px; /* 이미지를 오른쪽으로 이동 */
+  margin-right: 450px; /* 이미지를 오른쪽으로 이동 */
   margin-left: auto; /* 이미지를 왼쪽으로 이동 */
 }
 
