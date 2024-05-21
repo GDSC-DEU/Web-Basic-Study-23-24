@@ -290,5 +290,352 @@ a 태그를 의미 있게 사용하기 위해서는 hypertext의 h와 참고 문
 웹 사이트 완성하기 실습
 ~~~
 
+<br>
+
+---
+## 3주차(24.05.08 ~ 24.05.14)
+
+15강까지<br>
+>영상 링크: https://youtube.com/playlist?list=PLuHgQVnccGMAnWgUYiAW2cTzSBywFO75B&si=eArbaWw3jKEdoB6D
+
+# WEB2 CSS
+
+### WEB2 CSS - 1. 수업 소개
+
+~~~text
+튜토리얼
+~~~
+
+<br>
+
+---
+
+### WEB2 CSS - 2. CSS가 등장하기 전의 상황
+
+~~~text
+웹을 꾸미기 위한 방법
+1. HTML에 시각효과를 위한 새로운 태그를 추가한다. -> font라는 태그
+2. 디자인에 최적화된 새로운 언어를 만든다. -> CSS
+~~~
+
+1번 예시
+
+~~~html
+<ol>
+    <li><a href="1.html"><font color="red">HTML</font></a></li>
+    <li><a href="2.html"><font color="red">CSS</font></a></li>
+    <li><a href="3.html"><font color="red">JavaScript</font></a></li>
+</ol>
+~~~
+
+<br>
+
+---
+
+### WEB2 CSS - 3. CSS의 등장
+
+> CSS는 HTML과는 다른 컴퓨터 언어이다.
+
+2번 예시
+
+~~~html
+<head>
+    <style>
+        a {
+            color:red;
+        }
+    </style>
+</head>
+~~~
+
+~~~text
+문서 안의 모든 a 태그의 글자색을 빨간색으로 바꿔라
+한 번에 모든 태그의 속성을 바꿀 수 있다.
+~~~
+
+<br>
+
+---
+
+### WEB2 CSS - 4. CSS의 기본 문법
+
+> HTML 속성을 이용해서 부분적으로 CSS 사용하기
+
+~~~html
+<li><a href="2.html" style="color:red">CSS</a></li>
+~~~
+
+~~~css
+a {
+}
+-> 선택자 selector
+~~~
+
+<br>
+
+---
+
+### WEB2 CSS 5 - 혁명적 변화
+
+~~~css
+a -> 선택자 selector 
+{
+    color:red; -> property:value
+} -> declaration
+
+~~~
 
 
+<br>
+
+---
+
+### WEB2 CSS - 6. CSS 속성을 스스로 알아내기
+
+~~~html
+<style>
+    a {
+        color:black;
+        text-decoration: none;
+    }
+    h1 {
+        font-size: 60px;
+        text-align: center;
+    }
+</style>
+~~~
+
+<br>
+
+---
+
+### WEB2 CSS - 7. CSS 선택자의 기본
+
+~~~html
+<style>
+    a {
+        color:black;
+        text-decoration: none;
+    }
+    .saw {
+        color:gray
+    }
+    .active {
+        color:red
+    }
+    h1 {
+        font-size: 60px;
+        text-align: center;
+    }
+</style>
+<ol>
+    <li><a href="1.html" class="saw">HTML</a></li>
+    <li><a href="2.html" class="saw active">CSS</a></li>
+    <li><a href="3.html">JavaScript</a></li>
+</ol>
+~~~
+
+~~~text
+html의 class(그룹화) 사용하기
+.을 붙여서 사용
+순서 때문에 active가 적용된다.
+~~~
+
+우선순위 : ID 선택자 > 클래스 선택자 > 태그 선택자
+~~~html
+<style>
+    a {
+        color:black;
+        text-decoration: none;
+    }
+    #active {
+        color:red
+    }
+    .saw {
+        color:gray
+    }
+    h1 {
+        font-size: 60px;
+        text-align: center;
+    }
+</style>
+<ol>
+    <li><a href="1.html" class="saw">HTML</a></li>
+    <li><a href="2.html" class="saw" id="active">CSS</a></li>
+    <li><a href="3.html">JavaScript</a></li>
+</ol>
+~~~
+
+~~~text
+ID는 한 번만 나와야 한다.
+조금 더 구체적인 것이 더 우선순위가 된다.
+~~~
+
+<br>
+
+---
+
+### WEB2 CSS - 8. 박스 모델
+
+~~~html
+<style>
+    h1 { block level element
+        border-width: 5px;
+        border-color: red;
+        border-style: solid;
+        display: inline; 속성을 이용해서 바꿀 수 있음(기본값이 존재)
+    }
+    a { inline element
+        border-width: 5px;
+        border-color: red;
+        border-style: solid;
+    }
+</style>
+~~~
+
+중복 제거 방법
+
+~~~html
+<style>
+    h1, a {
+        /* border-width: 5px;
+        border-color: red;
+        border-style: solid;
+        display: inline; */
+        border: 5px solid red;
+    }
+</style>
+~~~
+
+~~~text
+화면 전체를 사용함 -> block level element
+자기 크기만 사용함 -> inline element
+내용이 태두리 간격을 -> padding
+태두리와 태두리 사이 -> margin
+~~~
+
+<br>
+
+---
+
+### WEB2 CSS - 9. 박스 모델 써먹기
+
+~~~text
+실습
+~~~
+
+<br>
+
+---
+
+### WEB2 CSS - 10. 그리드 소개
+
+~~~text
+아무 의미 없는 디자인을 위해서 존재하는 태그 div, span
+div -> block level element
+span -> inline element
+~~~
+
+~~~html
+<style>
+    #grid {
+        border: 5px solid pink;
+        display: grid;
+        grid-template-columns: 2fr 1fr; 자동으로 조정되는 단위 fr
+    }
+    div {
+        border: 5px solid gray;
+    }
+</style>
+~~~
+
+> HTML, CSS, JS 기술들 중에서 해당 웹 브라우저에서 사용할 수 있는지 없는지 알 수 있는 사이트<br>
+https://caniuse.com/
+
+<br>
+
+---
+
+### WEB2 CSS - 11. 그리드 써먹기
+
+~~~text
+실습 2.html
+~~~
+
+<br>
+
+---
+
+### WEB2 CSS - 12. 미디어 쿼리 소개
+
+반응형 디자인
+
+~~~html
+
+<style>
+    div {
+        border: 10px solid green;
+        font-size: 60px;
+    }
+    @media(max-width: 800px){
+        div {
+            display: none;
+        }
+    }
+    
+</style>
+~~~
+
+<br>
+
+---
+
+### WEB2 CSS - 13. 미디어 쿼리 써먹기
+
+~~~html
+실습 2.html
+
+<style>
+@media(max-width: 800px){
+    #grid {
+        display: block;
+        grid-template-columns: 150px 1fr;
+    }
+    ol {
+        border-right: none;
+    }
+    h1 {
+        border-bottom: none;
+    }
+}
+</style>
+~~~
+
+<br>
+
+---
+
+### WEB2 CSS - 14. CSS 코드의 재사용
+
+~~~html
+<head>
+    <title>file=1.html</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+~~~
+
+~~~text
+CSS 파일을 외부로 분리하면 최초 로딩에서는 추가적으로 파일을 다운로드하기 때문에 시간이 더 걸릴 수도 있지만 두 번째부터는 컴퓨터에 저장한 CSS 파일을 불러올 수 있기 때문에 로딩 시간을 줄일 수 있다.
+~~~
+
+
+<br>
+
+---
+
+### WEB2 CSS - 15. 수업을 마치며
+
+~~~text
+대충 공부하라는 말
+~~~

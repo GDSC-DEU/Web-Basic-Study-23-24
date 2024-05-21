@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>accent-color</title>
+    <style>
+      /* 한줄로 모슨 스타일 변경하기
+           커스터마이징이 어려운 HTML의 요소의 색상을 변경할 수 있다.
+        */
+      /* 브라우저에게 알림 */
+      :root {
+        accent-color: rgb(58, 170, 30);
+      }
+
+      .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .main .container {
+        padding: 20px;
+      }
+
+      .main .container div {
+        display: flex;
+        justify-content: space-between;
+        width: 300px;
+      }
+
+      p {
+        margin-top: -25px;
+        margin-bottom: 20px;
+      }
+
+      label {
+        padding-bottom: 15px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="container">
+        <h1>
+          <span style="color: red">Accent</span>
+          Color
+        </h1>
+        <p>Tint built-in HTML elements</p>
+        <div>
+          <label for="checkbox">Checkbox</label>
+          <input type="checkbox" name="checkbox" checked />
+        </div>
+        <div>
+          <label for="radio">Radio</label>
+          <input type="radio" name="radio" checked />
+          <input type="radio" name="radio" />
+        </div>
+        <div>
+          <label for="range">Range</label>
+          <input type="range" name="range" />
+        </div>
+        <div>
+          <label for="progress">Progress</label>
+          <progress
+            max="100"
+            name="progress"
+            value="50"
+            style="margin-top: 10px"
+          >
+            50%
+          </progress>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
