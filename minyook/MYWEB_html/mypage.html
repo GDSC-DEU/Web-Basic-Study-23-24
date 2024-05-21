@@ -9,15 +9,19 @@
   <body>
     <header>
       <nav class="navi">
-        <img src="/minyook/img/logo.png" alt="logo" />
+        <img
+          class="animate__animated animate__fadeIn"
+          src="/minyook/img/logo.png"
+          alt="logo"
+        />
         <ul>
           <li>
-            <button class="navi-btn logout">
+            <button class="navi-btn logout animate__animated animate__fadeIn">
               <span><a href="/minyook/MYWEB_html/login.html">로그아웃</a></span>
             </button>
           </li>
           <li>
-            <button class="navi-btn mypage">
+            <button class="navi-btn mypage animate__animated animate__fadeIn">
               <span
                 ><a href="/minyook/MYWEB_html/mypage.html">마이페이지</a></span
               >
@@ -29,6 +33,12 @@
 
     <div class="board">
       <h2 class="list-text">나의 게시글</h2>
+      <a
+        href="/minyook/MYWEB_html/write.html"
+        title="Button push blue/green"
+        class="button btnPush btnBlueGreen"
+        >작성하기</a
+      >
       <!-- 첫 번째 게시물 -->
       <div class="post">
         <img src="/minyook/img/background.jpg" alt="게시물 이미지" />
