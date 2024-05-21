@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>stardew web</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    body {
+      margin: 0;
+    }
+    a {
+      color: grey;
+    }
+    #a1 {
+      color: green;
+    }
+    h1 {
+      text-align: center;
+      border-bottom: 5px solid green;
+      padding: 20px;
+      margin: 0px;
+    }
+    #grid {
+      display: grid;
+      grid-template-columns: 230px 1fr;
+    }
+    #grid2 {
+      padding: 20px;
+    }
+    ol {
+      border-right: 5px solid;
+      color: green;
+      margin: 0px;
+      padding: 30px;
+    }
+    #now {
+      color: crimson;
+    }
+    @media screen and (max-width: 600px) {
+      #grid {
+        display: block;
+      }
+      ol {
+        border-right: none;
+        border-bottom: 5px solid;
+      }
+    }
+  </style>
+  <body>
+    <h1><a href="index.html" id="a1">스타듀밸리</a></h1>
+    <div id="grid">
+      <ol>
+        <li><a href="about.html">스타듀밸리란?</a></li>
+        <li><a href="code_music.html" id="now">게임 제작 (코딩, 음악)</a></li>
+        <li><a href="graphic.html">게임 제작 (그래픽)</a></li>
+      </ol>
+      <div id="grid2">
+        <h2>게임 제작 (코딩, 음악)</h2>
+        <p>
+          게임의 개발자인 에릭 바론은 전공 수업에서 Java를 배웠지만, C#과 유사한
+          부분이 많아서 게임 제작에 큰 어려움을 느끼지 않았다고 한다.
+          컴퓨터공학을 전공한 에릭 바론은 취업이 잘 되지 않자 생계는
+          여자친구에게 맡긴 채 포트폴리오 제작을 겸해 자신이 어린시절 즐겨했던
+          하베스트 문(목장이야기)의 클론 게임을 만들다가 스타듀 밸리의 형태로
+          되었고, 하베스트 문 커뮤니티에 발표하기에 이른다.<br />이후, 스팀
+          그린라이트에 올려 폭발적 지지를 얻으며, 퍼블리셔까지 구하게 된다. 학생
+          때 밴드 활동을 해서 작곡하는 법을 알아서 음악도 직접 만들었다.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
