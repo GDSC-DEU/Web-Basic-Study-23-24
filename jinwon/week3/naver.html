@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico?1" />
+    <!-- /앞에 . 이 있으면 현재 파일-->
+    <title>NAVER</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body,
+      form {
+        margin: 0;
+        padding: 0;
+      }
+      #wrap {
+        text-align: center;
+      }
+      #wrap-center {
+        width: 1280px;
+        background-color: none;
+        display: inline-block;
+      }
+      #header {
+        text-align: left;
+        position: relative;
+        height: 64px;
+      }
+      #header-hamburger,
+      #header-naverpay,
+      #header-notice,
+      #header-talk {
+        position: absolute;
+        top: 10px;
+        padding: 10px;
+        display: inline-block;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+      #header-hamburger > div,
+      #header-naverpay > div,
+      #header-notice > div,
+      #header-talk > div {
+        background-image: url(./sp_main.png);
+        width: 32px;
+        height: 32px;
+        background-size: 451px 441px;
+        background-repeat: no-repeat;
+      }
+      #header-hamburger {
+        left: -10px;
+      }
+      #header-hamburger > div {
+        background-position: -326px -161px;
+      }
+      #header-naverpay {
+        right: -10px;
+        padding: 10px 8px;
+      }
+      #header-naverpay > div {
+        background-position: -285px -107px;
+      }
+      #header-notice {
+        right: 42px;
+      }
+      #header-notice > div {
+        background-position: -326px -227px;
+      }
+      #header-talk {
+        right: 94px;
+      }
+      #header-talk > div {
+        background-position: -285px -173px;
+      }
+
+      #main {
+        height: 2000px;
+      }
+      .blind {
+        position: absolute;
+        clip: rect(0, 0, 0, 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="wrap-center">
+        <div id="header">
+          <button id="header-hamburger">
+            <div></div>
+          </button>
+          <button id="header-naverpay">
+            <div></div>
+            <span class="blind">네이버 페이</span>
+          </button>
+          <button id="header-notice">
+            <div></div>
+            <span class="blind">알림</span>
+          </button>
+          <button id="header-talk">
+            <div></div>
+            <span class="blind">톡</span>
+          </button>
+        </div>
+        <style>
+          #search > form {
+            display: inline-flex;
+            width: 706px;
+            height: 58px;
+            border: 1px solid #03c75a;
+            border-radius: 33px;
+            display: inline-block;
+            text-align: left;
+          }
+          #search-svg {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 12px;
+            margin-left: 12px;
+            width: 68px;
+            height: 100%;
+            padding-left: 10px;
+          }
+          #search-svg svg {
+            width: 24px;
+            height: 24px;
+            fill: #03c75a;
+          }
+          #search-input {
+            width: 480px;
+            padding: 4px 0;
+            border: none;
+            outline: none;
+            font-size: 2rem;
+            line-height: 24px;
+            font-weight: bold;
+          }
+          #search-input::placeholder {
+            color: white;
+          }
+          #search-input:focus::placeholder {
+            color: rgb(230, 230, 230);
+          }
+          #search-right {
+            display: inline-flex;
+            flex: 1;
+            align-items: stretch;
+            justify-content: flex-end;
+          }
+          #search-keyboard,
+          #search-recent,
+          #search-button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+          }
+          #search-keyboard::before {
+            content: "";
+            display: block;
+            background-image: url(https://pm.pstatic.net/resources/asset/sp_main.df0825d5.png);
+            background-size: 451px 441px;
+            background-position: -290px -270px;
+            background-repeat: no-repeat;
+            width: 24px;
+            height: 14px;
+          }
+          #search-recent::before {
+            content: "";
+            display: block;
+            background-image: url(https://pm.pstatic.net/resources/asset/sp_main.df0825d5.png);
+            background-size: 451px 441px;
+            background-position: -123px -98px;
+            background-repeat: no-repeat;
+            width: 10px;
+            height: 6px;
+          }
+          #search-button::before {
+            content: "";
+            display: block;
+            background-image: url(https://pm.pstatic.net/resources/asset/sp_main.df0825d5.png);
+            background-size: 422px 405px;
+            background-position: -344px -280px;
+            background-repeat: no-repeat;
+            width: 25px;
+            height: 25px;
+          }
+        </style>
+        <div id="search">
+          <form action="">
+            <a id="search-svg" href="https://www.naver.com/">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727v12.845z"
+                ></path>
+              </svg>
+            </a>
+            <label for="search-input" class="blind">검색어 입력</label>
+            <input
+              id="search-input"
+              type="text"
+              placeholder="검색어를 입력하세요"
+            />
+            <div id="search-right">
+              <button href="#" id="search-keyboard">
+                <span class="blind">입력도구</span>
+              </button>
+              <button href="#" id="search-recent">
+                <div><span class="blind">자동완성/최근검색어펼치기</span></div>
+              </button>
+              <button id="search-button">
+                <div><span class="blind">검색</span></div>
+              </button>
+            </div>
+          </form>
+          <style>
+            #nav > ul {
+              display: flex;
+              list-style-type: none;
+              justify-content: center;
+              font-size: 1.3rem;
+              line-height: 20px;
+            }
+            #nav a {
+              text-decoration: none;
+              text-align: center;
+            }
+            #nav a div {
+              width: 44px;
+              height: 44px;
+              margin: 0 auto;
+              position: relative;
+            }
+            #nav a div::after {
+              content: "";
+              display: inline-block;
+              background-image: url(https://pm.pstatic.net/resources/asset/sp_main.df0825d5.png);
+              background-size: 451px 441px;
+              background-repeat: no-repeat;
+              width: 40px;
+              height: 40px;
+              z-index: 1;
+              position: relative;
+            }
+            #nav a:visited {
+              color: black;
+            }
+            #nav li {
+              width: 64px;
+              margin-left: 4px;
+            }
+            #nav li:nth-of-type(1) {
+              /*id 사용하지 않고 사용가능 (1)==메일 */
+              margin-left: 0px;
+            }
+            #nav li a div::before {
+              content: "";
+              display: block;
+              position: absolute;
+              top: -1px;
+              left: -3px;
+              background-image: url(https://pm.pstatic.net/resources/asset/sp_main.df0825d5.png);
+              background-size: 451px 441px;
+              background-position: -193px 0px;
+              background-repeat: no-repeat;
+              width: 50px;
+              height: 50px;
+            }
+            #nav li:nth-of-type(1) a div::after {
+              background-position: -244px -41px;
+            }
+            #nav li:nth-of-type(2) a div::after {
+              background-position: -86px -184px;
+            }
+            #nav li:nth-of-type(3) a div::after {
+              background-position: -45px -184px;
+            }
+            #nav li:nth-of-type(4) a div::after {
+              background-position: -164px -229px;
+            }
+            #nav li:nth-of-type(5) a div::after {
+              background-position: -82px -229px;
+            }
+            #nav li:nth-of-type(6) a div::after {
+              background-position: -205px -229px;
+            }
+            #nav li:nth-of-type(7) a div::after {
+              background-position: -123px -229px;
+            }
+            #nav li:nth-of-type(8) a div::after {
+              background-position: -244px -82px;
+            }
+            #nav li:nth-of-type(9) a div::after {
+              background-position: -285px 0px;
+            }
+            #nav li:nth-of-type(10) a div::after {
+              background-position: -41px -229px;
+            }
+          </style>
+          <div id="nav">
+            <ul>
+              <li>
+                <a href="">
+                  <div></div>
+                  <span>메일</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <div></div>
+                  <span>카페</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <div></div>
+                  <span>블로그</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="">
+                  <div></div>
+                  <span>쇼핑</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <div></div>
+                  <span>뉴스</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <div></div>
+                  <span>증권</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <div></div>
+                  <span>부동산</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <div></div>
+                  <span>지도</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <div></div>
+                  <span>웹툰</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <div></div>
+                  <span class="blind">더보기</span>
+                </a>
+              </li>
+            </ul>
+            <div id="main"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
