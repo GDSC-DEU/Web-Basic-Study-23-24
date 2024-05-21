@@ -27,17 +27,7 @@ button {
   margin: 20px;
   outline: none;
 }
-
-a {
-  color: white;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #000;
-}
-
-.navi-btn {
+.custom-btn {
   width: 130px;
   height: 40px;
   padding: 10px 25px;
@@ -51,22 +41,21 @@ a:hover {
   display: inline-block;
 }
 
-/* logout-btn */
-.logout {
+.btn-5 {
   background: #000;
   color: #fff;
   line-height: 42px;
   padding: 0;
   border: none;
 }
-.logout:hover {
+.btn-5:hover {
   background: transparent;
   color: #000;
   box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
     7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
 }
-.logout:before,
-.logout:after {
+.btn-5:before,
+.btn-5:after {
   content: "";
   position: absolute;
   top: 0;
@@ -76,176 +65,85 @@ a:hover {
   background: #000;
   transition: 400ms ease all;
 }
-.logout:after {
+.btn-5:after {
   right: inherit;
   top: inherit;
   left: 0;
   bottom: 0;
 }
-.logout:hover:before,
-.logout:hover:after {
+.btn-5:hover:before,
+.btn-5:hover:after {
   width: 100%;
   transition: 800ms ease all;
 }
 
-/* mypage-btn */
-.mypage {
+/* 6 */
+.btn-6 {
   background: #000;
   color: #fff;
   line-height: 42px;
   padding: 0;
   border: none;
 }
-.mypage span {
+.btn-6 span {
   position: relative;
   display: block;
   width: 100%;
   height: 100%;
 }
-.mypage:before,
-.mypage:after {
+.btn-6:before,
+.btn-6:after {
   position: absolute;
   content: "";
   height: 0%;
   width: 2px;
   background: #000;
 }
-.mypage:before {
+.btn-6:before {
   right: 0;
   top: 0;
   transition: all 500ms ease;
 }
-.mypage:after {
+.btn-6:after {
   left: 0;
   bottom: 0;
   transition: all 500ms ease;
 }
-.mypage:hover {
+.btn-6:hover {
   color: #000;
   background: transparent;
 }
-.mypage:hover:before {
+.btn-6:hover:before {
   transition: all 500ms ease;
   height: 100%;
 }
-.mypage:hover:after {
+.btn-6:hover:after {
   transition: all 500ms ease;
   height: 100%;
 }
-.mypage span:before,
-.mypage span:after {
+.btn-6 span:before,
+.btn-6 span:after {
   position: absolute;
   content: "";
   background: #000;
 }
-.mypage span:before {
+.btn-6 span:before {
   left: 0;
   top: 0;
   width: 0%;
   height: 2px;
   transition: all 500ms ease;
 }
-.mypage span:after {
+.btn-6 span:after {
   right: 0;
   bottom: 0;
   width: 0%;
   height: 2px;
   transition: all 500ms ease;
 }
-.mypage span:hover:before {
+.btn-6 span:hover:before {
   width: 100%;
 }
-.mypage span:hover:after {
+.btn-6 span:hover:after {
   width: 100%;
-}
-
-a.button {
-  display: block;
-  position: relative;
-  float: left;
-  width: 120px;
-  height: 50px;
-  padding: 0;
-  margin: 10px 20px 10px 0;
-  font-weight: 600;
-  text-align: center;
-  line-height: 50px;
-  color: #fff;
-  border-radius: 5px;
-  transition: all 0.2s;
-}
-
-.btnBlueGreen {
-  background: #00ae68;
-}
-
-.btnBlueGreen.btnPush {
-  box-shadow: 0px 5px 0px 0px #007144;
-}
-
-.btnPush:hover {
-  margin-top: 15px;
-  margin-bottom: 5px;
-}
-
-.btnBlueGreen.btnPush:hover {
-  box-shadow: 0px 0px 0px 0px #007144;
-}
-
-.board {
-  width: 80%;
-  margin: 100px auto;
-  display: flex;
-  flex-wrap: wrap;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 100px;
-  cursor: pointer;
-}
-
-.list-text {
-  width: 80%;
-  font-size: 30px;
-  text-align: start;
-}
-
-.post {
-  position: relative;
-  width: 300px; /* 원하는 가로 크기로 조절 */
-  height: 250px; /* 원하는 세로 크기로 조절 */
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-}
-
-.post img {
-  width: 100%;
-  height: 150px; /* 이미지 높이를 조절하려면 이 부분을 수정 */
-  object-fit: cover;
-}
-
-.post:hover {
-  transform: scale(1.05);
-}
-
-.post-content {
-  padding: 15px;
-}
-
-.post-title {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-}
-
-.post-author {
-  color: #777;
-}
-
-.post-edit {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: 10px;
 }
