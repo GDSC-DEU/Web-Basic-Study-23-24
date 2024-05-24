@@ -1,3 +1,10 @@
+body {
+  font-family: "Arial", sans-serif;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
 .navi {
   display: flex;
   justify-content: space-between; /* 내비게이션 바의 내용을 양쪽 끝으로 정렬 */
@@ -167,80 +174,52 @@ a:hover {
   width: 100%;
 }
 
-#carouselExampleAutoplaying {
-  width: 800px;
-  height: 500px;
-  position: relative;
-  margin: auto;
-  margin-top: 50px;
-}
-
-.carousel-inner {
-  position: relative;
-  width: 800px;
-  overflow: hidden;
-  height: 500px;
-}
-
-.carousel-item .d-block {
-  width: 800px;
-  height: 500px;
-}
-
-.board {
-  width: 80%;
-  margin: 100px auto;
-  display: flex;
-  flex-wrap: wrap;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 100px;
-  cursor: pointer;
-}
-
-.list-text {
-  width: 80%;
-  font-size: 30px;
-  text-align: start;
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 2em;
+  color: #444;
 }
 
 .post {
-  position: relative;
-  width: 300px; /* 원하는 가로 크기로 조절 */
-  height: 250px; /* 원하는 세로 크기로 조절 */
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
   background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
-.post img {
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px; /* Increase the gap to 15px for better spacing */
+}
+
+.image-grid img {
   width: 100%;
-  height: 150px; /* 이미지 높이를 조절하려면 이 부분을 수정 */
-  object-fit: cover;
+  height: auto;
+  border-radius: 8px; /* Increase border-radius for a more polished look */
+  transition: transform 0.3s ease;
 }
 
-.post:hover {
+.image-grid img:hover {
   transform: scale(1.05);
 }
 
-.post-content {
-  padding: 15px;
+.post p {
+  line-height: 1.6;
+  font-size: 1.1em;
+  margin-top: 20px;
 }
 
-.post-title {
-  font-size: 1.2em;
+.post p br {
   margin-bottom: 10px;
 }
 
-.post-author {
-  color: #777;
-}
-
-.post-edit {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: 10px;
+@media (min-width: 600px) {
+  .post img {
+    max-width: 70%;
+    margin: 1%;
+  }
 }
