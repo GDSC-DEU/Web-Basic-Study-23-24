@@ -1,0 +1,165 @@
+html,
+body form {
+  margin: 0;
+  padding: 0;
+}
+#search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+#search > form {
+  display: inline-flex;
+  width: 706px;
+  height: 58px;
+  border: 1px solid #03c75a;
+  border-radius: 33px;
+  display: inline-block;
+  text-align: left;
+}
+#search-svg {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 12px;
+  margin-left: 12px;
+  width: 68px;
+  height: 100%;
+  padding-left: 10px;
+}
+#search-svg svg {
+  width: 24px;
+  height: 24px;
+  fill: #03c75a;
+}
+#search-input {
+  width: 480px;
+  padding: 4px 0;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  line-height: 24px;
+  font-weight: bold;
+}
+#search-input::placeholder {
+  color: white;
+}
+#search-input:focus::placeholder {
+  color: rgb(230, 230, 230);
+}
+#search-right {
+  display: inline-flex;
+  flex: 1;
+  align-items: stretch;
+  justify-content: flex-end;
+}
+#search-keyboard,
+#search-recent,
+#search-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+#search-keyboard::before {
+  content: "";
+  display: block;
+  background-image: url(https://pm.pstatic.net/resources/asset/sp_main.df0825d5.png);
+  background-size: 451px 441px;
+  background-position: -290px -270px;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 14px;
+}
+#search-recent::before {
+  content: "";
+  display: block;
+  background-image: url(https://pm.pstatic.net/resources/asset/sp_main.df0825d5.png);
+  background-size: 451px 441px;
+  background-position: -123px -98px;
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 6px;
+}
+#search-button::before {
+  content: "";
+  display: block;
+  background-image: url(https://pm.pstatic.net/resources/asset/sp_main.df0825d5.png);
+  background-size: 422px 405px;
+  background-position: -344px -280px;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+}
+#header {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+}
+#header > ul {
+  display: flex;
+  justify-content: space-between; /*글자 사이에 균일한 간격 만든다 */
+  align-items: center;
+  position: relative;
+  width: 1190px;
+  margin: 0 auto;
+}
+#header a {
+  text-decoration: none;
+  text-align: none;
+}
+#header a div {
+  display: block;
+  position: relative;
+  padding: 0 18px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: #000;
+}
+#header a:visited {
+  color: #000;
+}
+#header li {
+  margin-right: 5px;
+  color: #000;
+  line-height: 55px;
+  list-style: none; /*marker 제거*/
+}
+#main ul {
+  display: flex;
+  justify-content: flex-start;
+  padding-right: 10px;
+  margin: 0 auto;
+  font-size: 20px;
+  line-height: 21px;
+  letter-spacing: -0.5px;
+  color: #000;
+}
+#mains {
+  display: flex;
+  justify-content: flex-start;
+  width: 1190px;
+  padding-right: 10px;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 21px;
+  color: #000;
+}
+#img {
+  display: flex;
+  justify-content: space-evenly; /*img 사이에 균일한 간격 만들어줌*/
+  padding: 0px;
+}
+#last ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0px;
+  text-align: center;
+  font-size: 17px;
+  line-height: 21px;
+  color: #000;
+}
