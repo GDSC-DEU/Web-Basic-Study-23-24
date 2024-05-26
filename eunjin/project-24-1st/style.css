@@ -1,5 +1,6 @@
 body {
-  background-color: black;
+  background-color: rgb(20, 20, 20);
+  margin-top: 150px;
 }
 @font-face {
   font-family: "SBAggroB";
@@ -15,43 +16,63 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+header {
+  position: fixed;
+  width: 98%;
+  z-index: 100;
+  top: 0;
+  background-color: rgb(20, 20, 20);
+}
 h1 {
   text-align: center;
-  border-bottom: 5px solid red;
+  font-family: "NetflixSans-Regular";
   padding: 20px;
   margin: 0px;
 }
-#first {
-  text-align: center;
-  border-left: 5px solid red;
-  border-right: 5px solid red;
-  padding: 10px;
-  border-bottom: 5px solid red;
-  font-family: "GmarketSansMedium";
+#now {
+  background-color: rgb(41, 41, 41);
+  color: rgb(229, 9, 20);
 }
-#menu {
+.menu {
   text-align: center;
-  border-right: 5px solid red;
+  border-right: 5px solid rgb(229, 9, 20);
   font-family: "GmarketSansMedium";
   padding: 10px;
-  border-bottom: 5px solid red;
+  border-bottom: 5px solid rgb(229, 9, 20);
+  border-top: 5px solid rgb(229, 9, 20);
 }
 #menu_grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  border-left: 5px solid rgb(229, 9, 20);
 }
 a {
   text-decoration: none;
   color: white;
+  opacity: 1;
+  letter-spacing: 1px;
+  background-color: rgb(20, 20, 20);
+}
+a:hover {
+  color: rgb(229, 9, 20);
+  transition: 0.6s;
 }
 #title {
-  color: red;
+  color: rgb(229, 9, 20);
   font-family: "SBAggroB";
+}
+h1:hover {
+  transform: scale(1.2);
+  transition: all 0.5s;
 }
 p {
   color: white;
   text-align: center;
   font-family: "GmarketSansMedium";
+}
+#mainImg {
+  margin: 0 auto;
+  width: 500px;
 }
 #poster {
   display: grid;
@@ -69,22 +90,23 @@ p {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-.poster {
-  width: 250px;
-  padding: 10px;
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  grid-row-gap: 30px;
 }
-#item {
-  text-align: center;
+.img {
+  width: 250px;
+  position: relative;
+  margin: auto;
 }
 img {
-  -webkit-filter: grayscale(0) blur(0);
-  filter: grayscale(0) blur(0);
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
-}
-img:hover {
-  -webkit-filter: grayscale(100%) blur(3px);
-  filter: grayscale(100%) blur(3px);
+  width: 100%;
+  display: block;
 }
 .content {
   width: 100%;
