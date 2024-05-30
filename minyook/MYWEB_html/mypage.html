@@ -46,12 +46,12 @@
         >작성하기</a
       >
       <!-- 첫 번째 게시물 -->
-      <div class="post">
-        <img src="/minyook/img/background.jpg" alt="게시물 이미지" />
+      <div class="post" id="post-1">
+        <img src="/minyook/img/야경1.jpg" alt="게시물 이미지" />
         <div class="post-content">
           <div class="post-title">첫 번째 게시물 제목</div>
           <div class="post-author">작성자: 홍길동</div>
-          <a href="../Post/PostWrite.html">
+          <a href="/minyook/MYWEB_html/Post.html">
             <button class="post-edit" type="button">수정</button>
           </a>
         </div>
@@ -69,5 +69,19 @@
         </div>
       </div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        const postElement = document.getElementById("post-1");
+        postElement.addEventListener("click", () => {
+          window.location.href = "Post.html";
+        });
+
+        // Prevent propagation from button click inside the post
+        const editButton = postElement.querySelector(".post-edit");
+        editButton.addEventListener("click", (event) => {
+          event.stopPropagation();
+        });
+      });
+    </script>
   </body>
 </html>

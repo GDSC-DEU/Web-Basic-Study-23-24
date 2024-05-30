@@ -1,155 +1,155 @@
 .navi {
-  display: flex;
+  display: flex; /* 내비게이션 바의 내용을 가로로 정렬 */
   justify-content: space-between; /* 내비게이션 바의 내용을 양쪽 끝으로 정렬 */
-  align-items: center;
-  border-bottom: 1px solid gray;
+  align-items: center; /* 내비게이션 바의 내용을 수직 가운데 정렬 */
+  border-bottom: 1px solid gray; /* 내비게이션 바의 아래쪽에 회색 테두리 추가 */
 }
 
 .navi img {
-  width: 300px;
-  height: 150px;
-  object-fit: cover;
-  margin-right: 450px; /* 이미지를 오른쪽으로 이동 */
-  margin-left: auto; /* 이미지를 왼쪽으로 이동 */
+  width: 300px; /* 이미지의 너비를 300픽셀로 설정 */
+  height: 150px; /* 이미지의 높이를 150픽셀로 설정 */
+  object-fit: cover; /* 이미지가 컨테이너에 맞게 잘리거나 확대되도록 설정 */
 }
 
 .a_img {
-  width: 300px;
-  height: 150px;
-  margin-left: 800px;
+  width: 300px; /* a 요소의 너비를 300픽셀로 설정 */
+  height: 150px; /* a 요소의 높이를 150픽셀로 설정 */
+  margin-left: 1000px; /* a 요소의 왼쪽 여백을 1000픽셀로 설정 */
+  color: white; /* 텍스트 색상을 흰색으로 설정 */
+  text-decoration: none; /* 텍스트의 밑줄 제거 */
 }
 
 .navi ul {
-  display: flex;
-  list-style-type: none;
-  padding: 0;
+  display: flex; /* 목록을 가로로 정렬 */
+  list-style-type: none; /* 목록 아이템의 기본 스타일 제거 */
+  padding: 0; /* 목록의 기본 패딩 제거 */
 }
 
 .navi li {
-  margin-right: 20px;
+  margin-right: 20px; /* 각 목록 아이템의 오른쪽에 20픽셀의 여백 추가 */
 }
 
 button {
-  margin: 20px;
-  outline: none;
+  margin: 20px; /* 버튼의 모든 방향에 20픽셀의 여백 추가 */
+  outline: none; /* 버튼의 아웃라인 제거 */
 }
 .custom-btn {
-  width: 130px;
-  height: 40px;
-  padding: 10px 25px;
-  border: 2px solid #000;
-  font-family: "Lato", sans-serif;
-  font-weight: 500;
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
+  width: 130px; /* 버튼의 너비를 130픽셀로 설정 */
+  height: 40px; /* 버튼의 높이를 40픽셀로 설정 */
+  padding: 10px 25px; /* 버튼의 패딩 설정 (상하 10픽셀, 좌우 25픽셀) */
+  border: 2px solid #000; /* 버튼의 테두리를 검은색으로 설정 */
+  font-family: "Lato", sans-serif; /* 버튼의 글꼴 설정 */
+  font-weight: 500; /* 버튼의 글꼴 두께 설정 */
+  background: transparent; /* 버튼의 배경을 투명하게 설정 */
+  cursor: pointer; /* 커서를 포인터로 변경 */
+  transition: all 0.3s ease; /* 모든 변화에 대해 0.3초 동안 부드럽게 전환 */
+  position: relative; /* 버튼의 자식을 상대적으로 위치시킬 수 있도록 설정 */
+  display: inline-block; /* 버튼을 인라인 블록 요소로 설정 */
 }
 
+/* .btn-5 스타일 정의 */
 .btn-5 {
-  background: #000;
-  color: #fff;
-  line-height: 42px;
-  padding: 0;
-  border: none;
+  background: #000; /* 버튼의 배경을 검은색으로 설정 */
+  color: #fff; /* 버튼의 텍스트 색상을 흰색으로 설정 */
+  line-height: 42px; /* 텍스트의 줄 높이를 42픽셀로 설정 */
+  padding: 0; /* 버튼의 패딩을 0으로 설정 */
+  border: none; /* 버튼의 테두리를 제거 */
 }
 .btn-5:hover {
-  background: transparent;
-  color: #000;
-  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
-    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+  background: transparent; /* 호버 시 버튼의 배경을 투명하게 변경 */
+  color: #000; /* 호버 시 버튼의 텍스트 색상을 검은색으로 변경 */
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001; /* 호버 시 버튼에 그림자 효과 추가 */
 }
 .btn-5:before,
 .btn-5:after {
-  content: "";
-  position: absolute;
+  content: ""; /* 가상 요소의 내용 설정 */
+  position: absolute; /* 절대 위치 지정 */
   top: 0;
   right: 0;
-  height: 2px;
-  width: 0;
-  background: #000;
-  transition: 400ms ease all;
+  height: 2px; /* 높이를 2픽셀로 설정 */
+  width: 0; /* 너비를 0으로 설정 */
+  background: #000; /* 배경을 검은색으로 설정 */
+  transition: 400ms ease all; /* 모든 변화에 대해 400ms 동안 부드럽게 전환 */
 }
 .btn-5:after {
-  right: inherit;
-  top: inherit;
-  left: 0;
-  bottom: 0;
+  right: inherit; /* 오른쪽 속성을 상속값으로 설정 */
+  top: inherit; /* 위쪽 속성을 상속값으로 설정 */
+  left: 0; /* 왼쪽 속성을 0으로 설정 */
+  bottom: 0; /* 아래쪽 속성을 0으로 설정 */
 }
 .btn-5:hover:before,
 .btn-5:hover:after {
-  width: 100%;
-  transition: 800ms ease all;
+  width: 100%; /* 호버 시 너비를 100%로 설정 */
+  transition: 800ms ease all; /* 모든 변화에 대해 800ms 동안 부드럽게 전환 */
 }
 
-/* 6 */
+/* .btn-6 스타일 정의 */
 .btn-6 {
-  background: #000;
-  color: #fff;
-  line-height: 42px;
-  padding: 0;
-  border: none;
+  background: #000; /* 버튼의 배경을 검은색으로 설정 */
+  color: #fff; /* 버튼의 텍스트 색상을 흰색으로 설정 */
+  line-height: 42px; /* 텍스트의 줄 높이를 42픽셀로 설정 */
+  padding: 0; /* 버튼의 패딩을 0으로 설정 */
+  border: none; /* 버튼의 테두리를 제거 */
 }
 .btn-6 span {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
+  position: relative; /* 스팬을 상대적으로 위치시킴 */
+  display: block; /* 스팬을 블록 요소로 설정 */
+  width: 100%; /* 너비를 100%로 설정 */
+  height: 100%; /* 높이를 100%로 설정 */
 }
 .btn-6:before,
 .btn-6:after {
-  position: absolute;
-  content: "";
-  height: 0%;
-  width: 2px;
-  background: #000;
+  position: absolute; /* 절대 위치 지정 */
+  content: ""; /* 가상 요소의 내용 설정 */
+  height: 0%; /* 높이를 0%로 설정 */
+  width: 2px; /* 너비를 2픽셀로 설정 */
+  background: #000; /* 배경을 검은색으로 설정 */
 }
 .btn-6:before {
-  right: 0;
-  top: 0;
-  transition: all 500ms ease;
+  right: 0; /* 오른쪽을 0으로 설정 */
+  top: 0; /* 위쪽을 0으로 설정 */
+  transition: all 500ms ease; /* 모든 변화에 대해 500ms 동안 부드럽게 전환 */
 }
 .btn-6:after {
-  left: 0;
-  bottom: 0;
-  transition: all 500ms ease;
+  left: 0; /* 왼쪽을 0으로 설정 */
+  bottom: 0; /* 아래쪽을 0으로 설정 */
+  transition: all 500ms ease; /* 모든 변화에 대해 500ms 동안 부드럽게 전환 */
 }
 .btn-6:hover {
-  color: #000;
-  background: transparent;
+  color: #000; /* 호버 시 텍스트 색상을 검은색으로 변경 */
+  background: transparent; /* 호버 시 배경을 투명하게 변경 */
 }
 .btn-6:hover:before {
-  transition: all 500ms ease;
-  height: 100%;
+  transition: all 500ms ease; /* 모든 변화에 대해 500ms 동안 부드럽게 전환 */
+  height: 100%; /* 호버 시 높이를 100%로 설정 */
 }
 .btn-6:hover:after {
-  transition: all 500ms ease;
-  height: 100%;
+  transition: all 500ms ease; /* 모든 변화에 대해 500ms 동안 부드럽게 전환 */
+  height: 100%; /* 호버 시 높이를 100%로 설정 */
 }
 .btn-6 span:before,
 .btn-6 span:after {
-  position: absolute;
-  content: "";
-  background: #000;
+  position: absolute; /* 절대 위치 지정 */
+  content: ""; /* 가상 요소의 내용 설정 */
+  background: #000; /* 배경을 검은색으로 설정 */
 }
 .btn-6 span:before {
-  left: 0;
-  top: 0;
-  width: 0%;
-  height: 2px;
-  transition: all 500ms ease;
+  left: 0; /* 왼쪽을 0으로 설정 */
+  top: 0; /* 위쪽을 0으로 설정 */
+  width: 0%; /* 너비를 0%로 설정 */
+  height: 2px; /* 높이를 2픽셀로 설정 */
+  transition: all 500ms ease; /* 모든 변화에 대해 500ms 동안 부드럽게 전환 */
 }
 .btn-6 span:after {
-  right: 0;
-  bottom: 0;
-  width: 0%;
-  height: 2px;
-  transition: all 500ms ease;
+  right: 0; /* 오른쪽을 0으로 설정 */
+  bottom: 0; /* 아래쪽을 0으로 설정 */
+  width: 0%; /* 너비를 0%로 설정 */
+  height: 2px; /* 높이를 2픽셀로 설정 */
+  transition: all 500ms ease; /* 모든 변화에 대해 500ms 동안 부드럽게 전환 */
 }
 .btn-6 span:hover:before {
-  width: 100%;
+  width: 100%; /* 호버 시 너비를 100%로 설정 */
 }
 .btn-6 span:hover:after {
-  width: 100%;
+  width: 100%; /* 호버 시 너비를 100%로 설정 */
 }
