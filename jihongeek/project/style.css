@@ -13,17 +13,29 @@ body {
     height: 100vh;
 }
 .header {
-    padding: 25px 25px;
-    margin : 0px 0px;
-    font-weight:lighter;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     background-color: rgba(40, 40, 40, 0.584);
     border-bottom: 2px dashed;
     border-color: gray;
     margin-bottom: 10px;
     position: fixed;
+    padding: 25px 25px;
+    margin : 0px 0px;
     top: 0;
     left: 0;
     right: 0;
+    gap: 50px;
+}
+
+.header-text {
+    font-weight:lighter;
+    margin : 0px 0px;
+}
+.header-text a { 
+    text-decoration: none;
+    color: white;
 }
 
 .container {
@@ -34,12 +46,30 @@ body {
     gap: 50px;
     align-items:end;
     margin-block: 25px;
+    flex-wrap: wrap;
+}
+.header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 25px;
+    gap: 25px;    
+}
+.header nav a{
+    text-decoration: none;
+    color: inherit;
 }
 .comment-container {
     width: 400px;
     border-radius: 10px;
     background-color: rgb(54, 54, 54);
     padding: 15px 15px;
+}
+.image-container
+{
+    height: 300px;
+    width: 400px;
+    text-align: center;
 }
 p { 
     line-height: 150%;
