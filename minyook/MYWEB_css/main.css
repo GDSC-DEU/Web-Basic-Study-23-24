@@ -1,246 +1,242 @@
 .navi {
-  display: flex;
+  display: flex; /* 내비게이션 바를 플렉스 박스로 설정 */
   justify-content: space-between; /* 내비게이션 바의 내용을 양쪽 끝으로 정렬 */
-  align-items: center;
-  border-bottom: 1px solid gray;
+  align-items: center; /* 내비게이션 바의 내용을 수직 가운데 정렬 */
+  border-bottom: 1px solid gray; /* 내비게이션 바의 아래쪽에 회색 테두리 추가 */
 }
 
 .navi img {
-  width: 300px;
-  height: 150px;
-  object-fit: cover;
-  margin-right: 450px; /* 이미지를 오른쪽으로 이동 */
-  margin-left: auto; /* 이미지를 왼쪽으로 이동 */
+  width: 300px; /* 이미지의 너비를 300픽셀로 설정 */
+  height: 150px; /* 이미지의 높이를 150픽셀로 설정 */
+  object-fit: cover; /* 이미지가 컨테이너에 맞게 잘리거나 확대되도록 설정 */
 }
 
 .a_img {
-  width: 300px;
-  height: 150px;
-  margin-left: 800px;
-  color: white;
-  text-decoration: none;
+  width: 300px; /* a 요소의 너비를 300픽셀로 설정 */
+  height: 150px; /* a 요소의 높이를 150픽셀로 설정 */
+  margin-left: 1000px; /* a 요소의 왼쪽 여백을 1000픽셀로 설정 */
+  color: white; /* 텍스트 색상을 흰색으로 설정 */
+  text-decoration: none; /* 텍스트의 밑줄 제거 */
 }
 
 .navi ul {
-  display: flex;
-  list-style-type: none;
-  padding: 0;
+  display: flex; /* 목록을 가로로 정렬 */
+  list-style-type: none; /* 목록 아이템의 기본 스타일 제거 */
+  padding: 0; /* 목록의 기본 패딩 제거 */
 }
 
 .navi li {
-  margin-right: 20px;
+  margin-right: 20px; /* 각 목록 아이템의 오른쪽에 20픽셀의 여백 추가 */
 }
 
 button {
-  margin: 20px;
-  outline: none;
+  margin: 20px; /* 버튼의 모든 방향에 20픽셀의 여백 추가 */
+  outline: none; /* 버튼의 아웃라인 제거 */
 }
 
 .a {
-  color: white;
-  text-decoration: none;
+  color: white; /* 링크 텍스트 색상을 흰색으로 설정 */
+  text-decoration: none; /* 링크 텍스트의 밑줄 제거 */
 }
 
 a:hover {
-  color: #000;
+  color: #000; /* 호버 시 링크 텍스트 색상을 검은색으로 변경 */
 }
 
 .navi-btn {
-  width: 130px;
-  height: 40px;
-  padding: 10px 25px;
-  border: 2px solid #000;
-  font-family: "Lato", sans-serif;
-  font-weight: 500;
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
+  width: 130px; /* 버튼의 너비를 130픽셀로 설정 */
+  height: 40px; /* 버튼의 높이를 40픽셀로 설정 */
+  padding: 10px 25px; /* 버튼의 패딩 설정 (상하 10픽셀, 좌우 25픽셀) */
+  border: 2px solid #000; /* 버튼의 테두리를 검은색으로 설정 */
+  font-family: "Lato", sans-serif; /* 버튼의 글꼴 설정 */
+  font-weight: 500; /* 버튼의 글꼴 두께 설정 */
+  background: transparent; /* 버튼의 배경을 투명하게 설정 */
+  cursor: pointer; /* 커서를 포인터로 변경 */
+  transition: all 0.3s ease; /* 모든 변화에 대해 0.3초 동안 부드럽게 전환 */
+  position: relative; /* 버튼의 자식을 상대적으로 위치시킬 수 있도록 설정 */
+  display: inline-block; /* 버튼을 인라인 블록 요소로 설정 */
 }
 
 /* logout-btn */
 .logout {
-  background: #000;
-  color: #fff;
-  line-height: 42px;
-  padding: 0;
-  border: none;
+  background: #000; /* 버튼의 배경을 검은색으로 설정 */
+  color: #fff; /* 버튼의 텍스트 색상을 흰색으로 설정 */
+  line-height: 42px; /* 텍스트의 줄 높이를 42픽셀로 설정 */
+  padding: 0; /* 버튼의 패딩을 0으로 설정 */
+  border: none; /* 버튼의 테두리를 제거 */
 }
 .logout:hover {
-  background: transparent;
-  color: #000;
-  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
-    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+  background: transparent; /* 호버 시 버튼의 배경을 투명하게 변경 */
+  color: #000; /* 호버 시 버튼의 텍스트 색상을 검은색으로 변경 */
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001; /* 호버 시 버튼에 그림자 효과 추가 */
 }
 .logout:before,
 .logout:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 2px;
-  width: 0;
-  background: #000;
-  transition: 400ms ease all;
+  content: ""; /* 가상 요소의 내용 설정 */
+  position: absolute; /* 절대 위치 지정 */
+  top: 0; /* 위쪽을 0으로 설정 */
+  right: 0; /* 오른쪽을 0으로 설정 */
+  height: 2px; /* 높이를 2픽셀로 설정 */
+  width: 0; /* 너비를 0으로 설정 */
+  background: #000; /* 배경을 검은색으로 설정 */
+  transition: 400ms ease all; /* 모든 변화에 대해 400ms 동안 부드럽게 전환 */
 }
 .logout:after {
-  right: inherit;
-  top: inherit;
-  left: 0;
-  bottom: 0;
+  right: inherit; /* 위쪽 속성을 상속값으로 설정 */
+  top: inherit; /* 위쪽 속성을 상속값으로 설정 */
+  left: 0; /* 왼쪽을 0으로 설정 */
+  bottom: 0; /* 아래쪽을 0으로 설정 */
 }
 .logout:hover:before,
 .logout:hover:after {
-  width: 100%;
-  transition: 800ms ease all;
+  width: 100%; /* 호버 시 가상 요소의 너비를 100%로 설정 */
+  transition: 800ms ease all; /* 모든 변화에 대해 800ms 동안 부드럽게 전환 */
 }
 
 /* mypage-btn */
 .mypage {
-  background: #000;
-  color: #fff;
-  line-height: 42px;
-  padding: 0;
-  border: none;
+  background: #000; /* 버튼의 배경을 검은색으로 설정 */
+  color: #fff; /* 버튼의 텍스트 색상을 흰색으로 설정 */
+  line-height: 42px; /* 텍스트의 줄 높이를 42픽셀로 설정 */
+  padding: 0; /* 버튼의 패딩을 0으로 설정 */
+  border: none; /* 버튼의 테두리를 제거 */
 }
 .mypage span {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
+  position: relative; /* 자식을 상대적으로 위치시킬 수 있도록 설정 */
+  display: block; /* 블록 요소로 설정 */
+  width: 100%; /* 너비를 100%로 설정 */
+  height: 100%; /* 높이를 100%로 설정 */
 }
 .mypage:before,
 .mypage:after {
-  position: absolute;
-  content: "";
-  height: 0%;
-  width: 2px;
-  background: #000;
+  position: absolute; /* 절대 위치 지정 */
+  content: ""; /* 가상 요소의 내용 설정 */
+  height: 0%; /* 높이를 0%로 설정 */
+  width: 2px; /* 너비를 2픽셀로 설정 */
+  background: #000; /* 배경을 검은색으로 설정 */
 }
 .mypage:before {
-  right: 0;
-  top: 0;
-  transition: all 500ms ease;
+  right: 0; /* 오른쪽을 0으로 설정 */
+  top: 0; /* 위쪽을 0으로 설정 */
+  transition: all 500ms ease; /* 모든 변화에 대해 500ms 동안 부드럽게 전환 */
 }
 .mypage:after {
-  left: 0;
-  bottom: 0;
-  transition: all 500ms ease;
+  left: 0; /* 왼쪽을 0으로 설정 */
+  bottom: 0; /* 아래쪽을 0으로 설정 */
+  transition: all 500ms ease; /* 모든 변화에 대해 500ms 동안 부드럽게 전환 */
 }
 .mypage:hover {
-  color: #000;
-  background: transparent;
+  color: #000; /* 호버 시 버튼의 텍스트 색상을 검은색으로 변경 */
+  background: transparent; /* 호버 시 버튼의 배경을 투명하게 변경 */
 }
 .mypage:hover:before {
-  transition: all 500ms ease;
-  height: 100%;
+  height: 100%; /* 호버 시 가상 요소의 높이를 100%로 설정 */
 }
 .mypage:hover:after {
-  transition: all 500ms ease;
-  height: 100%;
+  height: 100%; /* 호버 시 가상 요소의 높이를 100%로 설정 */
 }
 .mypage span:before,
 .mypage span:after {
-  position: absolute;
-  content: "";
-  background: #000;
+  position: absolute; /* 절대 위치 지정 */
+  content: ""; /* 가상 요소의 내용 설정 */
+  background: #000; /* 배경을 검은색으로 설정 */
 }
 .mypage span:before {
-  left: 0;
-  top: 0;
-  width: 0%;
-  height: 2px;
-  transition: all 500ms ease;
+  left: 0; /* 왼쪽을 0으로 설정 */
+  top: 0; /* 위쪽을 0으로 설정 */
+  width: 0%; /* 너비를 0%로 설정 */
+  height: 2px; /* 높이를 2픽셀로 설정 */
+  transition: all 500ms ease; /* 모든 변화에 대해 500ms 동안 부드럽게 전환 */
 }
 .mypage span:after {
-  right: 0;
-  bottom: 0;
-  width: 0%;
-  height: 2px;
-  transition: all 500ms ease;
+  right: 0; /* 오른쪽을 0으로 설정 */
+  bottom: 0; /* 아래쪽을 0으로 설정 */
+  width: 0%; /* 너비를 0%로 설정 */
+  height: 2px; /* 높이를 2픽셀로 설정 */
+  transition: all 500ms ease; /* 모든 변화에 대해 500ms 동안 부드럽게 전환 */
 }
 .mypage span:hover:before {
-  width: 100%;
+  width: 100%; /* 호버 시 가상 요소의 너비를 100%로 설정 */
 }
 .mypage span:hover:after {
-  width: 100%;
+  width: 100%; /* 호버 시 가상 요소의 너비를 100%로 설정 */
 }
 
 #carouselExampleAutoplaying {
-  width: 800px;
-  height: 500px;
-  position: relative;
-  margin: auto;
-  margin-top: 50px;
+  width: 800px; /* 캐러셀의 너비를 800픽셀로 설정 */
+  height: 500px; /* 캐러셀의 높이를 500픽셀로 설정 */
+  position: relative; /* 자식을 상대적으로 위치시킬 수 있도록 설정 */
+  margin: auto; /* 수평 가운데 정렬 */
+  margin-top: 50px; /* 위쪽에 50픽셀의 여백 추가 */
 }
 
 .carousel-inner {
-  position: relative;
-  width: 800px;
-  overflow: hidden;
-  height: 500px;
+  position: relative; /* 자식을 상대적으로 위치시킬 수 있도록 설정 */
+  width: 800px; /* 캐러셀 내부의 너비를 800픽셀로 설정 */
+  overflow: hidden; /* 넘치는 내용을 숨김 */
+  height: 500px; /* 캐러셀 내부의 높이를 500픽셀로 설정 */
 }
 
 .carousel-item .d-block {
-  width: 800px;
-  height: 500px;
+  width: 800px; /* 캐러셀 아이템의 너비를 800픽셀로 설정 */
+  height: 500px; /* 캐러셀 아이템의 높이를 500픽셀로 설정 */
 }
 
 .board {
-  width: 80%;
-  margin: 100px auto;
-  display: flex;
-  flex-wrap: wrap;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 100px;
-  cursor: pointer;
+  width: 80%; /* 게시판의 너비를 80%로 설정 */
+  margin: 100px auto; /* 상하 100픽셀, 좌우 가운데 정렬 */
+  display: flex; /* 플렉스 박스로 설정 */
+  flex-wrap: wrap; /* 플렉스 아이템이 줄 바꿈되도록 설정 */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 그리드 레이아웃 설정 */
+  gap: 100px; /* 아이템 간의 간격을 100픽셀로 설정 */
+  cursor: pointer; /* 커서를 포인터로 변경 */
 }
 
 .list-text {
-  width: 80%;
-  font-size: 30px;
-  text-align: start;
+  width: 80%; /* 텍스트의 너비를 80%로 설정 */
+  font-size: 30px; /* 텍스트의 폰트 크기를 30픽셀로 설정 */
+  text-align: start; /* 텍스트를 왼쪽 정렬 */
 }
 
 .post {
-  position: relative;
-  width: 300px; /* 원하는 가로 크기로 조절 */
-  height: 250px; /* 원하는 세로 크기로 조절 */
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
+  position: relative; /* 자식을 상대적으로 위치시킬 수 있도록 설정 */
+  width: 300px; /* 포스트의 너비를 300픽셀로 설정 */
+  height: 250px; /* 포스트의 높이를 250픽셀로 설정 */
+  background-color: #fff; /* 배경색을 흰색으로 설정 */
+  border: 1px solid #ddd; /* 연한 회색 테두리 추가 */
+  border-radius: 5px; /* 테두리의 모서리를 둥글게 설정 */
+  overflow: hidden; /* 넘치는 내용을 숨김 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 박스 그림자 추가 */
+  transition: transform 0.3s ease-in-out; /* 변화에 대해 0.3초 동안 부드럽게 전환 */
 }
 
 .post img {
-  width: 100%;
-  height: 150px; /* 이미지 높이를 조절하려면 이 부분을 수정 */
-  object-fit: cover;
+  width: 100%; /* 이미지의 너비를 100%로 설정 */
+  height: 150px; /* 이미지의 높이를 150픽셀로 설정 */
+  object-fit: cover; /* 이미지가 컨테이너에 맞게 잘리거나 확대되도록 설정 */
 }
 
 .post:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* 호버 시 포스트를 1.05배 확대 */
 }
 
 .post-content {
-  padding: 15px;
+  padding: 15px; /* 내용의 패딩을 15픽셀로 설정 */
 }
 
 .post-title {
-  font-size: 1.2em;
-  margin-bottom: 10px;
+  font-size: 1.2em; /* 제목의 폰트 크기를 1.2em으로 설정 */
+  margin-bottom: 10px; /* 아래쪽에 10픽셀의 여백 추가 */
 }
 
 .post-author {
-  color: #777;
+  color: #777; /* 저자의 텍스트 색상을 연한 회색으로 설정 */
 }
 
 .post-edit {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: 10px;
+  position: absolute; /* 자식을 절대 위치시킴 */
+  bottom: 0; /* 아래쪽을 0으로 설정 */
+  right: 0; /* 오른쪽을 0으로 설정 */
+  margin: 10px; /* 모든 방향에 10픽셀의 여백 추가 */
 }
+
