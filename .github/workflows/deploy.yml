@@ -43,7 +43,7 @@ jobs:
           cp -r "minkyong/2024-05-20" "./project/minkyong/" 
           cp -r "seungjin/week-3" "./project/seungjin/" 
           cp -r "seungjin/week-4" "./project/seungjin/" 
-          cp -r "yoojin/site" " "./project/yoojin/"
+          cp -r "yoojin/site" "./project/yoojin/"
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload Static Web Project Artifacts
