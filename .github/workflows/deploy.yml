@@ -1,14 +1,30 @@
-name: Deploy Project
+name: Deploy Projects
 
-on: [push]
+on: 
+  push: 
+    branches: [$default-branch]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  build_and_test:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Upload Static Web Projects
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload Static Web Project Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: dist
@@ -24,3 +40,6 @@ jobs:
             seungjin\week-3
             seungjin\week-4
             yoojin\site
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
