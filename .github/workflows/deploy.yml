@@ -22,6 +22,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: Set Project Directory  
         run: |
           mkdir project
           mkdir ./project/jihongeek
