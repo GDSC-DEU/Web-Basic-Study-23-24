@@ -1,0 +1,26 @@
+name: Deploy Project
+
+on: [push]
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Upload Static Web Projects
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: |
+            jihongeek\project
+            beomjun(012050)\project
+            eunjin\project-24-1st
+            jinwon\web
+            minyook\img
+            minyook\MYWEB_css
+            minyook\MYWEB_html
+            minkyong\2024-05-20
+            seungjin\week-3
+            seungjin\week-4
+            yoojin\site
