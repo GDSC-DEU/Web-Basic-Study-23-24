@@ -22,24 +22,43 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        run: |
+          mkdir project
+          mkdir ./project/jihongeek
+          mkdir ./project/beomjun(012050)
+          mkdir ./project/eunjin
+          mkdir ./project/jinwon
+          mkdir ./project/minyook
+          mkdir ./project/minkyong
+          mkdir ./project/seungjin
+          mkdir ./project/yoojin
+          cp -r jihongeek/project ./project/jihongeek/ 
+          cp -r beomjun(012050)/project ./project/beomjun(012050)/
+          cp -r eunjin/project-24-1st ./project/eunjin/ 
+          cp -r jinwon/web ./project/jinwon/ 
+          cp -r minyook/img ./project/minyook/ 
+          cp -r minyook/MYWEB_css ./project/minyook/ 
+          cp -r minyook/MYWEB_html ./project/minyook/
+          cp -r minkyong/2024-05-20 ./project/minkyong/ 
+          cp -r seungjin/week-3 ./project/seungjin/ 
+          cp -r seungjin/week-4 ./project/seungjin/ 
+          cp -r yoojin/site ./project/yoojin/
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload Static Web Project Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
           name: github-pages
-          path: |
-            jihongeek/project
-            beomjun(012050)/project
-            eunjin/project-24-1st
-            jinwon/web
-            minyook/img
-            minyook/MYWEB_css
-            minyook/MYWEB_html
-            minkyong/2024-05-20
-            seungjin/week-3
-            seungjin/week-4
-            yoojin/site
+          path: project
+            
+            
+            
+            
+            
+            
+            
+            
+            
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
