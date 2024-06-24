@@ -34,6 +34,7 @@ jobs:
           mkdir "./project/seungjin"
           mkdir "./project/yoojin"
           cp -r "./index.html" "./project/"
+          cp -r "./thumbnail.png" "./project/"
           cp -r "jihongeek/project" "./project/jihongeek/" 
           cp -r "beomjun(012050)/project" "./project/beomjun(012050)/"
           cp -r "eunjin/project-24-1st" "./project/eunjin/" 
