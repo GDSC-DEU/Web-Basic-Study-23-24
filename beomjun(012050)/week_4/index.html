@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>file=index.html</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1><a href="index.html">WEB</a></h1>
+        <p>
+            <script>
+                document.write('hello world');
+            </script>
+        </p>
+        <input type="button" value="night" onclick="
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';
+        ">
+        <input type="button" value="white" onclick="
+        document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';
+        ">
+        <p>
+            <input type="button" value="alert" onclick="alert('asdf');">
+        </p>
+        <p>
+            <input type="text" onchange="alert('내용이 바뀜')">
+        </p>
+        <p>
+            <input type="text" onkeydown="alert('키를 눌렀음')">
+        </p>
+        <!-- <ol>
+            <li><a href="1.html"><font color="red">HTML</font></a></li>
+            <li><a href="2.html"><font color="red">CSS</font></a></li>
+            <li><a href="3.html"><font color="red">JavaScript</font></a></li>
+        </ol> -->
+        <div id="grid">
+            <ol>
+                <li><a href="1.html">HTML</a></li>
+                <li><a href="2.html">CSS</a></li>
+                <li><a href="3.html">JavaScript</a></li>
+            </ol>
+            <div id="article">
+                <h2>HTML</h2>
+                <p><a href="https://chat.openai.com/">ChatGpt가 한 말</a></p>
+                <p>
+                    CSS(카스케이딩 스타일 시트, Cascading Style Sheets)는 HTML 및 XML 기반 문서의 표현을 디자인하는 데 사용되는 스타일 시트 언어입니다. CSS는 웹 페이지의 레이아웃, 색상, 글꼴, 크기, 여백 등의 스타일을 지정하여 시각적인 디자인을 제어하는 데 주로 사용됩니다.
+                </p>
+                <p>
+                    CSS는 웹 디자인에서 중요한 요소로, 웹 페이지를 더욱 시각적으로 매력적으로 만들고 사용자 경험을 향상시키는 데 사용됩니다. CSS의 강력한 기능을 이용하여 다양한 디자인을 구현할 수 있으며, 최신 웹 표준과 브라우저 호환성을 고려하여 스타일을 작성하는 것이 중요합니다.
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
