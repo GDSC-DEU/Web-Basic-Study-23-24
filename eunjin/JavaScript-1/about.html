@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>stardew web</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    body {
+      margin: 0;
+    }
+    a {
+      color: grey;
+    }
+    #a1 {
+      color: green;
+    }
+    h1 {
+      text-align: center;
+      border-bottom: 5px solid green;
+      padding: 20px;
+      margin: 0px;
+    }
+    #grid {
+      display: grid;
+      grid-template-columns: 230px 1fr;
+    }
+    #grid2 {
+      padding: 20px;
+    }
+    ol {
+      border-right: 5px solid;
+      color: green;
+      margin: 0px;
+      padding: 30px;
+    }
+    #now {
+      color: crimson;
+    }
+    @media screen and (max-width: 650px) {
+      #grid {
+        display: block;
+      }
+      ol {
+        border-right: none;
+        border-bottom: 5px solid;
+      }
+    }
+  </style>
+  <body>
+    <h1><a href="index.html" id="a1">스타듀밸리</a></h1>
+    <div id="grid">
+      <ol>
+        <li><a href="about.html" id="now">스타듀밸리란?</a></li>
+        <li><a href="code_music.html">게임 제작 (코딩, 음악)</a></li>
+        <li><a href="graphic.html">게임 제작 (그래픽)</a></li>
+      </ol>
+      <div id="grid2">
+        <h2>스타듀밸리란?</h2>
+        <p>
+          <b
+            href="https://www.stardewvalley.net/"
+            target="_blank"
+            title="stardewvalley.net"
+            >'스타듀밸리'</b
+          >라는 게임은 1인 개발 게임으로, 유통을 제외한 코딩, 음악, 그래픽까지
+          전부 <u><strong>혼자</strong></u> 개발했다고 한다.
+        </p>
+        <img src="stardew.jpg" width="400px" />
+      </div>
+    </div>
+  </body>
+</html>

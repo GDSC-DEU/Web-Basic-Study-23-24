@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+}
+a {
+  color: grey;
+  text-decoration: none;
+}
+#a1 {
+  color: green;
+}
+h1 {
+  text-align: center;
+  border-bottom: 5px solid green;
+  padding: 20px;
+  margin: 0px;
+}
+#grid {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+}
+#grid2 {
+  padding: 20px;
+}
+ol {
+  border-right: 5px solid;
+  color: green;
+  margin: 0px;
+  padding: 30px;
+}
+table {
+  margin: 10px;
+}
+td {
+  margin: 10px;
+  width: 100px;
+}
+#now {
+  color: crimson;
+}
+@media screen and (max-width: 600px) {
+  #grid {
+    display: block;
+  }
+  ol {
+    border-right: none;
+    border-bottom: 5px solid;
+  }
+}
