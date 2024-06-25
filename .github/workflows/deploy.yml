@@ -1,0 +1,68 @@
+name: Deploy Projects
+
+on: 
+  push: 
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set Project Directory  
+        run: |
+          mkdir "project"
+          mkdir "./project/jihongeek"
+          mkdir "./project/beomjun(012050)"
+          mkdir "./project/eunjin"
+          mkdir "./project/jinwon"
+          mkdir "./project/minyook"
+          mkdir "./project/minkyong"
+          mkdir "./project/seungjin"
+          mkdir "./project/yoojin"
+          cp -r "./index.html" "./project/"
+          cp -r "./thumbnail.png" "./project/"
+          cp -r "jihongeek/project" "./project/jihongeek/" 
+          cp -r "beomjun(012050)/project" "./project/beomjun(012050)/"
+          cp -r "eunjin/project-24-1st" "./project/eunjin/" 
+          cp -r "jinwon/web" "./project/jinwon/" 
+          cp -r "minyook/img" "./project/minyook/" 
+          cp -r "minyook/MYWEB_css" "./project/minyook/" 
+          cp -r "minyook/MYWEB_html" "./project/minyook/"
+          cp -r "minkyong/2024-05-20" "./project/minkyong/" 
+          cp -r "seungjin/week-3" "./project/seungjin/" 
+          cp -r "seungjin/week-4" "./project/seungjin/" 
+          cp -r "seungjin/images" "./project/seungjin/" 
+          cp -r "yoojin/site" "./project/yoojin/"
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload Static Web Project Artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          name: github-pages
+          path: project
+            
+            
+            
+            
+            
+            
+            
+            
+            
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -639,3 +639,105 @@ CSS 파일을 외부로 분리하면 최초 로딩에서는 추가적으로 파�
 ~~~text
 대충 공부하라는 말
 ~~~
+
+<br>
+
+---
+
+### WEB2 JavaScript - 1.수업소개
+
+~~~text
+튜토리얼
+~~~
+
+<br>
+
+---
+
+### WEB2 JavaScript - 2.수업의 목적
+
+~~~html
+<input type="button" value="night" onclick="
+document.querySelector('body').style.backgroundColor='black';
+document.querySelector('body').style.color='white';
+">
+<input type="button" value="white" onclick="
+document.querySelector('body').style.backgroundColor='white';
+document.querySelector('body').style.color='black';
+">
+~~~
+
+<br>
+
+---
+
+### WEB2 JavaScript - 3.HTML과 JS의 만남 : script 태그
+
+~~~html
+<script>
+    document.write(1+1); # 2
+</script>
+<h1>1+1</h1> # 1+1
+~~~
+
+<br>
+
+---
+
+### WEB2 JavaScript - 4.HTML과 JS의 만남 : 이벤트
+
+~~~html
+<input type="button" value="alert" onclick="alert('asdf');">
+<input type="text" onchange="alert('내용이 바뀜')">
+<input type="text" onkeydown="alert('키를 눌렀음')">
+~~~
+<br>
+onclick 속성 값으로는 반드시 JavaScript가 들어가야 한다.
+<br>
+
+> 웹 브라우저 위에서 일어나는 일을 이벤트라고 한다. <br>브라우저에서는 이러한 이벤트들을 미리 정의해 놓았기 때문에 이것들을 이용해서 사용자와 상호작용할 수 있다.
+
+<br>
+
+---
+
+### WEB2 JavaScript - 5.HTML과 JS의 만남 (콘솔)
+
+~~~text
+JavaScript는 브라우저에서 실행되기 때문에 브라우저의 Console 창을 이용해서 JavaScript를 사용할 수 있다. (현재 보고 있는 웹 페이지 위에서 실행되기 때문에 JavaScript를 이용하여 해당 페이지에서 필요한 동작을 할 수 있음)
+~~~
+
+<br>
+
+---
+
+### WEB2 JavaScript - 6.데이터타입 - 문자열과 숫자
+
+~~~javascript
+# 문자와 숫자 타입에 대해 배움
+1==2    # false
+1==1    # true
+1=="1"  # true
+"1"==1  # true
+~~~
+
+<br>
+
+---
+
+### WEB2 JavaScript - 7.변수와 대입 연산자
+
+~~~javascript
+var name = '추가 내용';
+alert("asdf fdsa asdggds " + name + " asdfasdfjkl;fds");
+~~~
+
+<br>
+
+---
+
+### WEB2 JavaScript - 8.웹브라우저 제어
+
+~~~text
+JavaScript를 이용해서 웹 브라우저 제어하기
+~~~

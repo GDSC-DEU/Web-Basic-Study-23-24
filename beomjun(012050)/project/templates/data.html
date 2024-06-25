@@ -1,0 +1,64 @@
+<!-- https://picocss.com/examples -->
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Weouse</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/' + favicon_dir + '.ico') }}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='data.css') }}" />
+    <style>
+      :root {
+            --main-bg-color: {{ background_color }};
+        }
+
+        body {
+            background-color: var(--main-bg-color);
+        }
+    </style>
+  </head>
+  <body>
+    <nav class="container-fluid">
+      <ul>
+        <li>
+          <a href="./" class="contrast"><strong>Weuse</strong></a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="https://home-data.osxteams.net/admin/" target="_blank" class="contrast"><strong>Manage</strong></a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <article class="grid">
+        <ul>
+          <h1>우리 집</h1>
+          <li>온도: {{ home.temperature }}°C / 습도: {{ home.humidity }}</li>
+        </ul>
+        <div>
+          <img src="{{ url_for('static', filename='img/weather_icon/' + weather_icon + '.png') }}" id="weather_icon"/>
+        </div>
+      </article>
+      <article class="grid">
+      <!-- <article id="Article"> -->
+        <div><h1>우리 동네</h1></div>
+        <div>
+          <li>날씨 {{ weather.weather_text }}</li>
+          <li>온도: {{ weather.temperature }}°C</li>
+          <li>최고온도: {{ weather.high_temperature }}°C</li>
+          <li>최저온도: {{ weather.low_temperature }}°C</li>
+        </div>
+        <div>
+          <li>미세먼지: {{ weather.pm10 }} {{ weather.pm10_text }}</li>
+          <li>초미세먼지: {{ weather.pm25 }} {{ weather.pm25_text }}</li>
+          <li>습도: {{ weather.humidity }}</li>
+          <li>강수확률 {{ weather.rainfall }} 강수량 {{ weather.rainfall_detail }}</li>
+        </div>
+      </article>
+    </main>
+    <footer style="padding-bottom: 1rem;">
+      <small>To <a href="https://www.kr-weathernews.com/mv4/html/today.html?loc=3100000000" target="_blank" class="secondary">Weather-news</a></small>
+    </footer>
+  </body>
+</html>

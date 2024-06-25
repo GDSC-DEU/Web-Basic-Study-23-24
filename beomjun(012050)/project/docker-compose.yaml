@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  frontend:
+    container_name: frontend
+    build: .
+    restart: always
+    ports:
+      - 2367:2367
+    volumes:
+      - ./static:/app/static
+      - ./templates:/app/templates
+    networks:
+      - my-net
+
+networks:
+  my-net:
