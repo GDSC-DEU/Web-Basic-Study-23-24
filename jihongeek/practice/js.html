@@ -15,6 +15,26 @@
             </ol> 
             <div>
                 <h2>JavaScript에 대하여</h2>
+                <div>
+                    <input type="button" value="노란색" onclick="
+                        var redValue = '255';
+                        var greenValue = '255';
+                        var blueValue = '0';
+                        // 노란색에 해당하는 CSS rgb 프로퍼티 값 만들기 : 문자열 연결 '+'
+                        var backgroundColorValue = 'rgb(' + redValue + ' ' + greenValue + ' ' + blueValue + ')'; // rgb(255 255 0)
+                        // body 태그 background-color 속성 만든 프로퍼티 값(노란색)으로 변경
+                        document.querySelector('body').style.backgroundColor = backgroundColorValue;
+                    ">
+                    <input type="button" value="초록색" onclick="
+                        var redValue = 0;
+                        var greenValue = 255;
+                        var blueValue = 0;
+                        // 초록색에 해당하는 CSS rgb 프로퍼티 값 만들기 : 템플릿 리터럴 사용
+                        var backgroundColorValue = `rgb(${redValue} ${greenValue} ${blueValue})` // rgb(0 255 0)
+                        // body 태그 background-color 속성 만든 프로퍼티 값(초록색)으로 변경
+                        document.querySelector('body').style.backgroundColor = backgroundColorValue; 
+                    ">
+                </div>
                 <p>
                     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" title="JavaScript MDN 문서">JavaScript (JS) </a>  
                     is <strong>a lightweight <u>interpreted (or just-in-time compiled) programming language</u> with first-class functions.</strong> 
