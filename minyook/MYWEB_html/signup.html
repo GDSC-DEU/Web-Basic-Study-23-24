@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../MYWEB_css/signup.css" />
+    <script defer src="/minyook/MYWEB_js/main.js"></script>
     <title>Trevelo</title>
   </head>
   <body>
@@ -13,19 +14,16 @@
 
     <div class="login-form">
       <form id="loginForm">
-        <input type="text" id="name" placeholder="이름" />
-        <input type="email" id="email" placeholder="이메일" />
+        <input type="text" id="name" placeholder="이름" required/>
+        <input type="email" id="email" placeholder="이메일" required/>
         <input type="password" id="password" placeholder="비밀번호" />
         <input
           type="password"
           id="Confirmpassword"
           placeholder="비밀번호 재확인"
         />
-        <p>
-          <a class="login-btn" href="../MYWEB_html/login.html"
-            >회원가입</a
-          >
-        </p>
+        <input type="submit" class="login-btn" value="회원가입">
+        
       </form>
     </div>
   </body>

@@ -109,6 +109,7 @@ body form {
 #header a {
   text-decoration: none;
   text-align: none;
+  color: black;
 }
 #header a div {
   display: block;
@@ -117,14 +118,14 @@ body form {
   font-size: 16px;
   font-weight: 600;
   letter-spacing: -0.5px;
-  color: #000;
+  color: black;
 }
 #header a:visited {
   color: #000;
 }
 #header li {
   margin-right: 5px;
-  color: #000;
+  color: black;
   line-height: 55px;
   list-style: none; /*marker 제거*/
 }
@@ -162,4 +163,13 @@ body form {
   font-size: 17px;
   line-height: 21px;
   color: #000;
+}
+@media (max-width: 1000px) {
+  /*최대 width가 800픽셀이다*/
+  #search {
+    display: block; /*800픽셀보다 화면의 크기가 작을 때 id 값 grid가 block으로 바뀐다*/
+  }
+  #main {
+    display: block; /*800픽셀보다 화면의 크기가 작을 때 id 값 grid가 block으로 바뀐다*/
+  }
 }
