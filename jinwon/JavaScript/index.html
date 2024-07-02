@@ -58,11 +58,16 @@
           value="빨강색"
           onclick=" 
       var target=document.querySelector('body')
-      if
-    (this.value==='빨강색'){
+      if (this.value==='빨강색'){
     target.style.backgroundColor='red';
     target.style.color='black';
     this.value='주황색'
+    var links = document.querySelectorAll('a');
+          var i = 0;
+          while (i < links.length) {
+            links[i].style.color = 'powderblue';
+            i = i + 1;
+          }
     } 
     else if(this.value==='주황색'){
     target.style.backgroundColor = 'orange';
@@ -102,6 +107,13 @@
     var target=document.querySelector('body')
   target.style.backgroundColor = 'white';
   target.style.color= 'black';
+
+  var links = document.querySelectorAll('a');
+          var i = 0;
+          while (i < links.length) {
+            links[i].style.color = 'black';
+            i = i + 1;
+          }
   "
         />
         <h3>
