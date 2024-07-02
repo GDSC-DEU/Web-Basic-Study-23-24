@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var target = document.querySelector('body');
+    </script>
+    
+        <input type="button" value="night" onclick="
+            if(this.value === 'night'){
+                target.style.backgroundColor='black';
+                target.style.color = 'white';
+                target.dataset.mode = 'night';
+                this.value = 'day';
+            }
+            else{
+                target.style.backgroundColor = 'white';
+                target.dataset.node = 'day';
+                this.value='night';
+            }
+            ">
+
+        
+      
+
+
+</body>
+</html>
