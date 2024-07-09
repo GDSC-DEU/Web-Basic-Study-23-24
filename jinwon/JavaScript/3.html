@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEB2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="color.js"></script>
+    <style>
+      h1 {
+        text-align: center;
+        font-size: 40px;
+        margin: 0;
+        padding: 20px;
+        border-bottom: 1px solid black; /*제목에 밑줄 생성*/
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      ol {
+        border-right: 1px solid black;
+        width: 200px;
+        margin: 0;
+        padding: 20px;
+      }
+      #grid {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+      }
+      #text {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>WEB2</h1>
+    <div id="grid">
+      <script>
+        var coworkers = ["html", "css", "javascript"];
+      </script>
+      <ol id="text">
+        <script>
+          var i = 0;
+          while (i < coworkers.length) {
+            document.write(
+              '<li><a href="http://a.com/' +
+                coworkers[i] +
+                '"target="_blank">' +
+                coworkers[i] +
+                "</a></li>"
+            );
+            i = i + 1;
+          }
+        </script>
+      </ol>
+      <div>
+        <input type="button" value="빨강색" onclick="changes(this); " />
+        <input
+          type="button"
+          value="기본"
+          onclick="
+    reset(this);
+  "
+        />
+        <h3>
+          <p>
+            JavaScript는 가벼운, 인터프리터 혹은 just-in-time 컴파일 프로그래밍
+            언어로, 일급 함수를 지원합니다.<br />
+            웹 페이지를 위한 스크립트 언어로 잘 알려져 있고, Node.js, Apache
+            CouchDB, Adobe Acrobat처럼 많은 비 브라우저 환경에서도 사용합니다<br />
+            JavaScript는 프로토타입 기반, 다중 패러다임, 단일 스레드, 동적
+            언어로, 객체지향형, 명령형, 선언형 스타일을 지원합니다.
+          </p>
+        </h3>
+      </div>
+    </div>
+  </body>
+</html>
