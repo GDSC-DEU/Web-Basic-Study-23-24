@@ -4,6 +4,7 @@
     <title>stardew web</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css" />
+    <script src="colors.js"></script>
   </head>
   <body>
     <h1><a href="index.html" id="a1">스타듀밸리</a></h1>
@@ -14,6 +15,12 @@
         <li><a href="graphic.html" id="now">게임 제작 (그래픽)</a></li>
       </ol>
       <div id="grid2">
+        <input
+          id="night_day"
+          type="button"
+          value="night"
+          onclick="nightDayHandler(this);"
+        />
         <h2>게임 제작 (그래픽)</h2>
         <p>
           생계는 기본적으로 여자친구가 해결했지만, 정말 어려웠을 때 자신도

@@ -4,49 +4,8 @@
     <title>stardew web</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css" />
+    <script src="colors.js"></script>
   </head>
-  <style>
-    body {
-      margin: 0;
-    }
-    a {
-      color: grey;
-    }
-    #a1 {
-      color: green;
-    }
-    h1 {
-      text-align: center;
-      border-bottom: 5px solid green;
-      padding: 20px;
-      margin: 0px;
-    }
-    #grid {
-      display: grid;
-      grid-template-columns: 230px 1fr;
-    }
-    #grid2 {
-      padding: 20px;
-    }
-    ol {
-      border-right: 5px solid;
-      color: green;
-      margin: 0px;
-      padding: 30px;
-    }
-    #now {
-      color: crimson;
-    }
-    @media screen and (max-width: 600px) {
-      #grid {
-        display: block;
-      }
-      ol {
-        border-right: none;
-        border-bottom: 5px solid;
-      }
-    }
-  </style>
   <body>
     <h1><a href="index.html" id="a1">스타듀밸리</a></h1>
     <div id="grid">
@@ -56,6 +15,12 @@
         <li><a href="graphic.html">게임 제작 (그래픽)</a></li>
       </ol>
       <div id="grid2">
+        <input
+          id="night_day"
+          type="button"
+          value="night"
+          onclick="nightDayHandler(this);"
+        />
         <h2>게임 제작 (코딩, 음악)</h2>
         <p>
           게임의 개발자인 에릭 바론은 전공 수업에서 Java를 배웠지만, C#과 유사한
