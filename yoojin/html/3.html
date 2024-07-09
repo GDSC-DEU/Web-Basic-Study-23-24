@@ -3,38 +3,21 @@
   <head>
     <title>WEB1-JavaScript</title>
     <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="colors.js"></script>
   </head>
   <body>
     <h1><a href="index.html">WEB</a></h1>
     <input
+      id="night_day"
       type="button"
       value="night"
       onclick="
-      var target= document.querySelector('body');
-    if(this.value==='night'){
-     target.style.background='black';
-     target.style.color='white';
-     this.value='day';
-     var alist = document.querySelectorAll('a');
-     var i =0;
-     while(i<alist.length){
-      alist[i].style.color = 'powderblue';
-      i=i+1;
-     }
-    }
-    else{
-   target.style.background='white';
-   target.style.color='black';
-     this.value='night';
-     var alist = document.querySelectorAll('a');
-     var i =0;
-     while(i<alist.length){
-      alist[i].style.color = 'blue';
-      i=i+1;
-     }
-    }
+      nightDayHandler(this);
+    
   "
     />
+
     <ol>
       <li><a href="1.html">HTML</a></li>
       <li><a href="2.html">CSS</a></li>
