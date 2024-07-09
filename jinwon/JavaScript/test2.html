@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Object</h1>
+    <h2>Create</h2>
+    <script>
+      var coworkers = {
+        programmer: "egoing",
+        designer: "leezche",
+      }; //객체는 중괄호 배열은 대괄호
+      document.write("programmer: " + coworkers.programmer + "</br>");
+      document.write("Designer: " + coworkers.designer + "</br>");
+      coworkers.bookkeeper = "duru";
+      document.write("bookkeeper: " + coworkers.bookkeeper + "</br>");
+      coworkers["data scientist"] = "taeho";
+      document.write(
+        "data scientist: " + coworkers["data scientist"] + "</br>"
+      );
+    </script>
+    <h2>Iterate</h2>
+    <script>
+      for (var key in coworkers) {
+        document.write(key + " : " + coworkers[key] + "<br>");
+      }
+    </script>
+    <h2>Property & Method</h2>
+    <script>
+      //function showAll(){} 과 같음
+      coworkers.showAll = function () {
+        for (let key in this) {
+          document.write(key + " : " + this[key] + "<br>");
+        }
+      };
+      coworkers.showAll();
+    </script>
+  </body>
+</html>
