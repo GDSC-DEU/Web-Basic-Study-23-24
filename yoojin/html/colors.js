@@ -25,14 +25,14 @@ var Body = {
 function nightDayHandler(self) {
   var target = document.querySelector("body");
   if (self.value === "night") {
-    Body.SetBackgroundColor = "black";
-    Body.SetColor = "white";
+    Body.SetBackgroundColor("black");
+    Body.SetColor("white");
     self.value = "day";
 
     Links.SetColor("powderblue");
   } else {
-    Body.SetBackgroundColor = "white";
-    Body.SetColor = "black";
+    Body.SetBackgroundColor("white");
+    Body.SetColor("black");
     self.value = "night";
 
     Links.SetColor("blue");
