@@ -4,6 +4,34 @@
         <title>WEB1-HTML</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
+        <script>
+            var text = {
+                setTextColor : (textColor)=>{
+                    var aTags = document.querySelectorAll('a,p,h2,li');
+                    for (aTag of aTags) {
+                        aTag.style.color = textColor;
+                    }
+                },
+                setBackgroundColor : (backgroundColor)=>{
+                    document.querySelector('body').style.backgroundColor = backgroundColor;
+                },
+                toggleValue : (self)=>{
+                    if (self.value === '야간모드로 변경') {
+                        self.value = '주간모드로 변경';
+                    }
+                    else {
+                        self.value = '야간모드로 변경';
+                    } 
+                },
+            };
+            var nightDayHandler = (self)=> {
+                    var backgroundColor = self.value === '야간모드로 변경' ? 'black' : 'white';
+                    var textColor = self.value === '야간모드로 변경' ? 'white' : 'black';
+                    text.setBackgroundColor(backgroundColor);
+                    text.setTextColor(textColor);
+                    text.toggleValue(self);       
+                }
+        </script>
     </head>
     <body>
         <h1><a href="web.html">WEB</a></h1>
@@ -16,24 +44,7 @@
             <div>
                 <h2>JavaScript에 대하여</h2>
                 <div>
-                    <input type="button" value="노란색" onclick="
-                        var redValue = '255';
-                        var greenValue = '255';
-                        var blueValue = '0';
-                        // 노란색에 해당하는 CSS rgb 프로퍼티 값 만들기 : 문자열 연결 '+'
-                        var backgroundColorValue = 'rgb(' + redValue + ' ' + greenValue + ' ' + blueValue + ')'; // rgb(255 255 0)
-                        // body 태그 background-color 속성 만든 프로퍼티 값(노란색)으로 변경
-                        document.querySelector('body').style.backgroundColor = backgroundColorValue;
-                    ">
-                    <input type="button" value="초록색" onclick="
-                        var redValue = 0;
-                        var greenValue = 255;
-                        var blueValue = 0;
-                        // 초록색에 해당하는 CSS rgb 프로퍼티 값 만들기 : 템플릿 리터럴 사용
-                        var backgroundColorValue = `rgb(${redValue} ${greenValue} ${blueValue})` // rgb(0 255 0)
-                        // body 태그 background-color 속성 만든 프로퍼티 값(초록색)으로 변경
-                        document.querySelector('body').style.backgroundColor = backgroundColorValue; 
-                    ">
+                    <input type="button" value="야간모드로 변경" onclick="nightDayHandler(this)">
                 </div>
                 <p>
                     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" title="JavaScript MDN 문서">JavaScript (JS) </a>  
