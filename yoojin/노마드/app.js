@@ -1,16 +1,12 @@
-const title = document.querySelector("div.hello:first-child h1");
+const loginInput = document.querySelector("#login-form input");
+const loginButton = document.querySelector("#login-form button");
 
-function handleTitleClick() {
-  title.style.color = "blue";
+function onLoginBtnClick() {
+  console.log("hello", loginInput.value);
 }
 
-function handleMouseEnter() {
-  title.innerText = "Mouse is here!";
+if (loginButton) {
+  loginButton.addEventListener("click", onLoginBtnClick);
+} else {
+  console.error("loginButton이 존재하지 않습니다.");
 }
-
-function handleMouseLeave() {
-  title.innerText = "Mouse is gone!";
-}
-title.addEventListener("click", handleTitleClick);
-title.addEventListener("mouseenter", handleMouseEnter);
-title.addEventListener("mouseleave", handleMouseLeave);
