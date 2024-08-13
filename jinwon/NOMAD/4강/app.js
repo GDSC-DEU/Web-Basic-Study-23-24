@@ -6,18 +6,12 @@ function handleTitleClick() {
 
 h1.addEventListener("click", handleTitleClick);
 
-/*
-const loginForm = document.getElementById("login-form");
-
-const loginInput = loginForm.querySelector("input");
-*/
 const loginInput = document.querySelector("#login-form input");
-/*
-const loginButton = loginForm.querySelector("button");
-*/
+
 const loginButton = document.querySelector("#login-form button");
 
 function BtnClick() {
-  console.dir(loginInput.value);
+  const username = loginInput.value;
+  console.log(username);
 }
 loginButton.addEventListener("click", BtnClick);

@@ -8,3 +8,9 @@ h1 {
 .clicked {
   color: orange;
 }
+.clicks {
+  color: black;
+}
+.hidden {
+  display: none;
+}
