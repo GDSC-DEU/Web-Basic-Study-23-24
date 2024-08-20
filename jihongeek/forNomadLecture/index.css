@@ -1,0 +1,15 @@
+body {
+    text-align: center;
+}
+.main-text {
+    font-size: 100px;
+}
+.main-text.tomato::after {
+    content: "🍅";
+}
+.main-text.apple::after{
+    content: "🍏";
+}
+.hidden {
+    display: none;
+}

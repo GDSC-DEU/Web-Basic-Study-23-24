@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="Login">
+        <h2>Login</h2>
+
+
+        <form  id="login-form" >
+            <input required maxlength="15" type="text" placeholder="아이디" >
+            <input type="password" name="userPassword" placeholder="비밀번호">
+            <label for="remember-check">
+                <input type="checkbox" id="remember-check">로그인 상태 유지
+            </label>
+            <input type="submit" value="로그인" />
+        </form>
+
+        <a href="https://www.naver.com/"> go to coureses</a>
+
+    </div>
+    <h1 id="greeting" class="hidden"></h1>
+
+    <h2 id="clock">00:00:00</h2>
+
+    <script src="app.js"></script>
+    <script src="clock.js"></script>
+</body>
+</html>
