@@ -7,10 +7,12 @@
     <title>Momnentum App</title>
   </head>
   <body>
-    <div id="login-form">
-      <input type="text" placeholder="What is your name?" />
+    <form id="login-form">
+      <input type="text" placeholder="What is your name?" maxlength="15" required/>
       <button type="submit">Login</button>
-    </div>
+      <button class="del">Del</button>
+    </form>
+    <h1 id="greeting" class="hidden"></h1>
   </body>
   <script src="app.js"></script>
 </html>
