@@ -1,8 +1,12 @@
 body {
-  background-color: beige;
+  background-color: whitesmoke;
 }
 h1 {
   color: cornflowerblue;
+  transition: color 0.5s ease-in-out;
+}
+h2 {
+  color: black;
   transition: color 0.5s ease-in-out;
 }
 .clicked {
@@ -10,6 +14,9 @@ h1 {
 }
 .clicks {
   color: black;
+}
+.clic {
+  color: tomato;
 }
 .hidden {
   display: none;

@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Momentum App</title>
   </head>
   <body>
     <div class="hello">
       <h1>Title</h1>
     </div>
-    <form id="login-form">
+    <form class="hidden" id="login-form">
       <input
         required
         maxlength="15"
@@ -19,8 +19,9 @@
       />
       <input type="submit" value="Log In" />
     </form>
-    <h1 id="greeting" class="hidden"></h1>
-    <a href="https://nomadcoders.co">Go to courses</a>
-    <script src="4.5.js"></script>
+    <h2 id="clock">00:00</h2>
+    <h1 class="hidden" id="greeting"></h1>
+    <script src="js/greetings.js"></script>
+    <script src="js/clock.js"></script>
   </body>
 </html>
