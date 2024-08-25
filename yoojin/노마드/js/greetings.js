@@ -1,4 +1,4 @@
-const loginForm = document.querySelector("#login-form ");
+const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
 
@@ -9,16 +9,16 @@ function onLoginSubmit(event) {
   event.preventDefault();
   loginForm.classList.add(HIDDEN_CLASSNAME);
   const username = loginInput.value;
-  localStorage.setItem("USERNAME_KEY", username);
+  localStorage.setItem(USERNAME_KEY, username);
   paintingGreetings(username);
 }
 
 function paintingGreetings(username) {
-  const username = localStorage.getItem(USERNAME_KEY);
-  greeting.innerText = "Hello" + username;
+  greeting.innerText = "Hello " + username;
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
-const savedUsername = localStorage.getItem("USERNAME_KEY");
+
+const savedUsername = localStorage.getItem(USERNAME_KEY);
 
 if (savedUsername === null) {
   loginForm.classList.remove(HIDDEN_CLASSNAME);
